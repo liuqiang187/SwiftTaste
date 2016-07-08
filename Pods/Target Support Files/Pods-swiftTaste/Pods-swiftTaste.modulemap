@@ -1,0 +1,6 @@
+framework module Pods_swiftTaste {
+  umbrella header "Pods-swiftTaste-umbrella.h"
+
+  export *
+  module * { export * }
+}
