@@ -8,7 +8,9 @@
 
 import UIKit
 
-class CommentView: UIView {
+public let TextField_Change = "textFieldChange"
+
+class CommentView: UIView ,UITextFieldDelegate {
 
     var placeHolderStr : String?
     {
@@ -54,4 +56,11 @@ class CommentView: UIView {
         text.setValue(UIFont.systemFontOfSize(12), forKeyPath: "_placeholderLabel.font")
         return text
     }()
+    
+    
+    
+    // MARK: - UITextFieldDelegate
+    func textFieldDidBeginEditing(textField: UITextField) {
+        NSNotificationCenter.defaultCenter().postNotificationName(TextField_Change, object: nil)
+    }
 }

@@ -9,7 +9,8 @@
 import UIKit
 import SnapKit
 
-class FirstViewController: UIViewController ,UITextFieldDelegate {
+
+class FirstViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +20,11 @@ class FirstViewController: UIViewController ,UITextFieldDelegate {
         navigationItem.title = "聊天"
         
         view.backgroundColor = UIColor.whiteColor()
+        
+        NSNotificationCenter.defaultCenter().addObserver(self,
+                                                         selector: #selector(FirstViewController.changeOffset),
+                                                         name: TextField_Change,
+                                                         object: nil)
         
         setup()
     }
@@ -58,12 +64,13 @@ class FirstViewController: UIViewController ,UITextFieldDelegate {
     
     private lazy var commentView : CommentView = {
         let view = CommentView()
-        
         return view
     }()
     
-    
-    // MARK: - UITextFieldDelegate
-    
-    
+    @objc private func changeOffset()
+    {
+        view.snp_updateConstraints { (make) in
+            make.centerY.equalTo(view.snp_centerY).offset(-50)
+        }
+    }
 }
