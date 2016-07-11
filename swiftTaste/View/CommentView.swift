@@ -33,12 +33,21 @@ class CommentView: UIView {
     
     private func setup()
     {
+        backgroundColor = MainColor()
         
+        addSubview(textFiled)
+        
+        textFiled.snp_makeConstraints { (make) in
+            make.centerY.equalTo(snp_centerY)
+            make.width.equalTo(snp_width).inset(1)
+            make.height.equalTo(30)
+            make.left.equalTo(snp_left).offset(1)
+        }
     }
 
     private lazy var textFiled : UITextField = {
         let text = UITextField(frame: CGRectZero)
-        text.background = UIImage(named: "s_bg_3rd_292x43")
+        text.backgroundColor = UIColor.whiteColor()
         text.placeholder = "评论"
         text.font = UIFont.systemFontOfSize(12)
         // 设置placeholder的字体

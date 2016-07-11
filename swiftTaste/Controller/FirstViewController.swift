@@ -9,7 +9,7 @@
 import UIKit
 import SnapKit
 
-class FirstViewController: UIViewController {
+class FirstViewController: UIViewController ,UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +33,12 @@ class FirstViewController: UIViewController {
             make.width.equalTo(100)
         }
         
+        view.addSubview(commentView)
+        commentView.snp_makeConstraints { (make) in
+            make.top.equalTo(inputBtn.snp_bottom).offset(10)
+            make.centerX.equalTo(view.snp_centerX)
+            make.height.width.equalTo(100)
+        }
     }
 
     
@@ -49,5 +55,15 @@ class FirstViewController: UIViewController {
         btn.addTarget(self, action: #selector(FirstViewController.btnClick), forControlEvents: .TouchUpInside)
         return btn
     }()
+    
+    private lazy var commentView : CommentView = {
+        let view = CommentView()
+        
+        return view
+    }()
+    
+    
+    // MARK: - UITextFieldDelegate
+    
     
 }
