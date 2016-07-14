@@ -8,7 +8,7 @@
 
 import UIKit
 
-public let TextField_Change = "textFieldChange"
+public let TextField_Change = "TextField_Change"
 
 class CommentView: UIView ,UITextFieldDelegate {
 
@@ -52,6 +52,7 @@ class CommentView: UIView ,UITextFieldDelegate {
         text.backgroundColor = UIColor.whiteColor()
         text.placeholder = "评论"
         text.font = UIFont.systemFontOfSize(12)
+        text.delegate = self
         // 设置placeholder的字体
         text.setValue(UIFont.systemFontOfSize(12), forKeyPath: "_placeholderLabel.font")
         return text
@@ -62,5 +63,9 @@ class CommentView: UIView ,UITextFieldDelegate {
     // MARK: - UITextFieldDelegate
     func textFieldDidBeginEditing(textField: UITextField) {
         NSNotificationCenter.defaultCenter().postNotificationName(TextField_Change, object: nil)
+    }
+    
+    func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
+        return true
     }
 }

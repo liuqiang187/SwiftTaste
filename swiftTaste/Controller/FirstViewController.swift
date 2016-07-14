@@ -21,10 +21,7 @@ class FirstViewController: UIViewController {
         
         view.backgroundColor = UIColor.whiteColor()
         
-        NSNotificationCenter.defaultCenter().addObserver(self,
-                                                         selector: #selector(FirstViewController.changeOffset),
-                                                         name: TextField_Change,
-                                                         object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(FirstViewController.changeOffset), name: TextField_Change, object: nil)
         
         setup()
     }
@@ -69,8 +66,8 @@ class FirstViewController: UIViewController {
     
     @objc private func changeOffset()
     {
-        view.snp_updateConstraints { (make) in
-            make.centerY.equalTo(view.snp_centerY).offset(-50)
+        commentView.snp_updateConstraints { (make) in
+            make.bottom.equalTo(inputBtn.snp_top).offset(-10)
         }
     }
 }
