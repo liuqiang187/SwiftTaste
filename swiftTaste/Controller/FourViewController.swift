@@ -17,7 +17,7 @@ class FourViewController: UIViewController {
         
         navigationItem.title = "我"
         
-        view.backgroundColor = UIColor.whiteColor()
+        view.backgroundColor = RGB(220, G: 84, B: 75)
     }
 
 

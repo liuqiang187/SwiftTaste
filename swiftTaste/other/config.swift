@@ -9,11 +9,11 @@
 import UIKit
 
 public func RGB(R: CGFloat, G: CGFloat, B: CGFloat) -> UIColor {
-    return UIColor.init(red: R, green: G, blue: B, alpha: 1)
+    return UIColor.init(red: R/255.0, green: G/255.0, blue: B/255.0, alpha: 1)
 }
 
 public func RGBA(R: CGFloat, G: CGFloat, B: CGFloat, A: CGFloat) -> UIColor {
-    return UIColor.init(red: R, green: G, blue: B, alpha: A)
+    return UIColor.init(red: R/255.0, green: G/255.0, blue: B/255.0, alpha: A)
 }
 
 public func MainColor() -> UIColor {
