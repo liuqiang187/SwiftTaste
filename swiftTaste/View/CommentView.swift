@@ -8,7 +8,9 @@
 
 import UIKit
 
-class CommentView: UIView {
+public let TextField_Change = "TextField_Change"
+
+class CommentView: UIView ,UITextFieldDelegate {
 
     var placeHolderStr : String?
     {
@@ -33,16 +35,37 @@ class CommentView: UIView {
     
     private func setup()
     {
+        backgroundColor = MainColor()
         
+        addSubview(textFiled)
+        
+        textFiled.snp_makeConstraints { (make) in
+            make.centerY.equalTo(snp_centerY)
+            make.width.equalTo(snp_width).inset(1)
+            make.height.equalTo(30)
+            make.left.equalTo(snp_left).offset(1)
+        }
     }
 
     private lazy var textFiled : UITextField = {
         let text = UITextField(frame: CGRectZero)
-        text.background = UIImage(named: "s_bg_3rd_292x43")
+        text.backgroundColor = UIColor.whiteColor()
         text.placeholder = "评论"
         text.font = UIFont.systemFontOfSize(12)
+        text.delegate = self
         // 设置placeholder的字体
         text.setValue(UIFont.systemFontOfSize(12), forKeyPath: "_placeholderLabel.font")
         return text
     }()
+    
+    
+    
+    // MARK: - UITextFieldDelegate
+    func textFieldDidBeginEditing(textField: UITextField) {
+        NSNotificationCenter.defaultCenter().postNotificationName(TextField_Change, object: nil)
+    }
+    
+    func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
+        return true
+    }
 }
