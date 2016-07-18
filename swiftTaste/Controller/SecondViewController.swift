@@ -17,7 +17,7 @@ class SecondViewController: UIViewController {
         
         navigationItem.title = "Hi"
         
-        view.backgroundColor = UIColor.whiteColor()
+        view.backgroundColor = RGB(40, G: 162, B: 100)
     }
 
 

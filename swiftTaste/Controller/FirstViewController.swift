@@ -35,19 +35,17 @@ class FirstViewController: UIViewController {
             make.height.equalTo(100)
             make.width.equalTo(100)
         }
-        
-        view.addSubview(commentView)
-        commentView.snp_makeConstraints { (make) in
-            make.top.equalTo(inputBtn.snp_bottom).offset(10)
-            make.centerX.equalTo(view.snp_centerX)
-            make.height.width.equalTo(100)
-        }
     }
-
     
     func btnClick()
     {
-        navigationController?.pushViewController(NewFetureViewController(), animated: true)
+        let vc = NewFetureViewController()
+        
+        navigationController?.pushViewController(vc, animated: true)
+        
+        vc.clickBlock = { type in
+            self.inputBtn.setTitle("点击" + type, forState: .Normal)
+        }
     }
     
     private lazy var inputBtn : UIButton = {
