@@ -36,7 +36,9 @@ class NewFetureViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(CellReuseIdentifier)
         
-        cell!.textLabel?.text = "wahaha"
+        let index = NSString(format: "%zd",indexPath.row)
+        
+        cell!.textLabel?.text = "wahaha  " + (index as String)
         cell?.backgroundColor = MainColor()
         
         return cell!
@@ -45,6 +47,14 @@ class NewFetureViewController: UITableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
+        let index = NSString(format: "%zd",indexPath.row)
+        
+        clickBlock?(type: index as String)
+        
+        navigationController?.popViewControllerAnimated(true)
     }
 
+    //点击block
+    var clickBlock : ((type : String) -> ())?
+    
 }

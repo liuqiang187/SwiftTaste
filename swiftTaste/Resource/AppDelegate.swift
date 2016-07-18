@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // 设置全局的UINavigationBar属性
         let bar = UINavigationBar.appearance()
         bar.tintColor = MainColor()
-        bar.titleTextAttributes = [NSFontAttributeName : UIFont.systemFontOfSize(17), NSForegroundColorAttributeName : MainColor()]
+        bar.titleTextAttributes = [NSFontAttributeName : UIFont.systemFontOfSize(17), NSForegroundColorAttributeName : UIColor.blackColor()]
         
         // 设置window
         window = UIWindow(frame: UIScreen.mainScreen().bounds)

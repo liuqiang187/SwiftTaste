@@ -38,7 +38,13 @@ class FirstViewController: UIViewController {
     
     func btnClick()
     {
-        navigationController?.pushViewController(NewFetureViewController(), animated: true)
+        let vc = NewFetureViewController()
+        
+        navigationController?.pushViewController(vc, animated: true)
+        
+        vc.clickBlock = { type in
+            self.inputBtn.setTitle("点击" + type, forState: .Normal)
+        }
     }
     
     private lazy var inputBtn : UIButton = {
