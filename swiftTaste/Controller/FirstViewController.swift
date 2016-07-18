@@ -32,9 +32,7 @@ class FirstViewController: UIViewController {
             make.height.equalTo(100)
             make.width.equalTo(100)
         }
-        
     }
-
     
     func btnClick()
     {
