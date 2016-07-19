@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '6FBC768FD93DD86CF8B4FBCA333BD449'
-               BlueprintName = 'SnapKit'
+               BlueprintIdentifier = 'FABEFE59C2CD9C196FD2B92D8E5BC90E'
+               BlueprintName = 'LTNavigationBar'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'SnapKit.framework'>
+               BuildableName = 'LTNavigationBar.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

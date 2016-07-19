@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>LTNavigationBar.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-swiftTaste.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,17 +37,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>6FBC768FD93DD86CF8B4FBCA333BD449</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A92729AF6BC33A03E61896277E5019B1</key>
+		<key>DB3CF4A9337BBCFE90CACDF9E55950D6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D3EA29253670835C2E5A81CB6FAAD35B</key>
+		<key>FABEFE59C2CD9C196FD2B92D8E5BC90E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
