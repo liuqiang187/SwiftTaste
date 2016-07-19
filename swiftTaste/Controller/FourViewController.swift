@@ -52,8 +52,7 @@ class FourViewController: UITableViewController {
     }
     
     override func scrollViewDidScroll(scrollView: UIScrollView) {
-        let color = RGB(0, G: 175, B: 240)
-        
+        let color = MainColor()
         let offsetY = scrollView.contentOffset.y;
         if (offsetY > 50) {
             let alpha = min(1, 1 - ((50 + 64 - offsetY) / 64))
