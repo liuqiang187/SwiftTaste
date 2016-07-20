@@ -17,5 +17,9 @@ public func RGBA(R: CGFloat, G: CGFloat, B: CGFloat, A: CGFloat) -> UIColor {
 }
 
 public func MainColor() -> UIColor {
-    return UIColor.init(red: 31/255.0, green: 185/255.0, blue: 34/255.0, alpha: 1)
+    return RGB(31, G: 185, B: 34)
+}
+
+public func NavBarColor() -> UIColor {
+    return RGB(56, G: 57, B: 63)
 }

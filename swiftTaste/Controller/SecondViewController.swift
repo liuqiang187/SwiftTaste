@@ -15,9 +15,11 @@ class SecondViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        navigationItem.title = "Hi"
+        navigationItem.title = "朋友"
         
-        view.backgroundColor = RGB(40, G: 162, B: 100)
+//        view.backgroundColor = RGB(40, G: 162, B: 100)
+        view.backgroundColor = UIColor.whiteColor()
+        
     }
 
 

@@ -12,6 +12,9 @@ private let CellReuseIdentifier = "FCellReuseIdentifier"
 
 class FourViewController: UITableViewController {
 
+    
+    private let MAXTOPBEGINE : CGFloat = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,7 +22,7 @@ class FourViewController: UITableViewController {
         
         navigationItem.title = "我"
         
-        view.backgroundColor = RGB(220, G: 84, B: 75)
+        view.backgroundColor = UIColor.whiteColor()
         
         tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: CellReuseIdentifier)
         
@@ -28,7 +31,7 @@ class FourViewController: UITableViewController {
 
     // MARK: - Table view data source
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
+        return 10
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
@@ -52,10 +55,10 @@ class FourViewController: UITableViewController {
     }
     
     override func scrollViewDidScroll(scrollView: UIScrollView) {
-        let color = MainColor()
+        let color = NavBarColor()
         let offsetY = scrollView.contentOffset.y;
-        if (offsetY > 50) {
-            let alpha = min(1, 1 - ((50 + 64 - offsetY) / 64))
+        if (offsetY > MAXTOPBEGINE) {
+            let alpha = min(1, 1 - ((MAXTOPBEGINE + 64 - offsetY) / 64))
             navigationController?.navigationBar.lt_setBackgroundColor(color.colorWithAlphaComponent(alpha))
         } else {
             navigationController?.navigationBar.lt_setBackgroundColor(color.colorWithAlphaComponent(0))
@@ -65,6 +68,7 @@ class FourViewController: UITableViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.navigationBar.shadowImage = UIImage.init();
+        navigationController?.navigationBar.lt_setBackgroundColor(UIColor.clearColor())
     }
     
     override func viewWillDisappear(animated: Bool) {

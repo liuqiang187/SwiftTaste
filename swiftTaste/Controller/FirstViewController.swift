@@ -34,7 +34,7 @@ class FirstViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.navigationBar.lt_setBackgroundColor(RGB(56, G: 57, B: 63))
+        navigationController?.navigationBar.lt_setBackgroundColor(NavBarColor())
     }
     
     private func setup()
