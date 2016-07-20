@@ -20,13 +20,12 @@ class MainViewController: UITabBarController, UITabBarControllerDelegate {
     private func setup()
     {
         // 设置tabBar的tintColor
-        tabBar.tintColor = UIColor.blackColor()
+        tabBar.tintColor = MainColor()
         
-        
-        addViewController(FirstViewController(), title: "chat", icon: "tab_chat", iconPress: "tab_chat_pressed")
-        addViewController(SecondViewController(), title: "hi", icon: "tab_hi", iconPress: "tab_hi_pressed")
-        addViewController(ThirdViewController(), title: "friend", icon: "tab_hello", iconPress: "tab_hello_pressed")
-        addViewController(FourViewController(), title: "me", icon: "tab_me", iconPress: "tab_me_pressed")
+        addViewController(FirstViewController(), title: "chat", icon: "tabbar_mainframe", iconPress: "tabbar_mainframeHL")
+        addViewController(SecondViewController(), title: "friend", icon: "tabbar_contacts", iconPress: "tabbar_contactsHL")
+        addViewController(ThirdViewController(), title: "hi", icon: "tabbar_discover", iconPress: "tabbar_discoverHL")
+        addViewController(FourViewController(), title: "me", icon: "tabbar_me", iconPress: "tabbar_meHL")
     }
     
     // 添加子控件

@@ -17,5 +17,5 @@ public func RGBA(R: CGFloat, G: CGFloat, B: CGFloat, A: CGFloat) -> UIColor {
 }
 
 public func MainColor() -> UIColor {
-    return UIColor.init(red: 111/255.0, green: 65/255.0, blue: 177/255.0, alpha: 1)
+    return UIColor.init(red: 31/255.0, green: 185/255.0, blue: 34/255.0, alpha: 1)
 }

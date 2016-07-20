@@ -21,6 +21,8 @@ class FirstViewController: UIViewController {
         
         view.backgroundColor = UIColor.whiteColor()
         
+        NSThread.sleepForTimeInterval(3.0)//延长3秒
+        
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(FirstViewController.changeOffset), name: TextField_Change, object: nil)
         
         setup()
