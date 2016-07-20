@@ -23,3 +23,11 @@ public func MainColor() -> UIColor {
 public func NavBarColor() -> UIColor {
     return RGB(56, G: 57, B: 63)
 }
+
+public func kScreenWidth() -> CGFloat {
+    return UIScreen.mainScreen().bounds.size.width
+}
+
+public func kScreenHeight() -> CGFloat {
+    return UIScreen.mainScreen().bounds.size.height
+}

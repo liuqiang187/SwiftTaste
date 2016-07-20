@@ -48,14 +48,10 @@ class FourViewController: UIViewController, UITableViewDelegate, UITableViewData
     {
         view.addSubview(tableView)
         tableView.snp_makeConstraints { (make) in
-            make.top.bottom.width.equalTo(view)
+            make.edges.equalTo(view)
         }
         
         tableView.insertSubview(backImg, atIndex: 0)
-        backImg.snp_makeConstraints { (make) in
-            make.top.width.equalTo(tableView)
-            make.height.equalTo(200)
-        }
         originalHeaderImageViewFrame = backImg.frame
     }
     
@@ -118,6 +114,7 @@ class FourViewController: UIViewController, UITableViewDelegate, UITableViewData
         let img = UIImageView()
         img.image = UIImage.init(named: "SkyBg01")
         img.contentMode = UIViewContentMode.ScaleAspectFill
+        img.frame = CGRectMake(0, 0, kScreenWidth(), 200)
         return img
     }()
     
