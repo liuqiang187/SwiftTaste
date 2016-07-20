@@ -21,6 +21,7 @@
 		5A2150481D2F9CE000E17B8B /* FourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2150471D2F9CE000E17B8B /* FourViewController.swift */; };
 		5A21504A1D2F9FA200E17B8B /* NewFetureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2150491D2F9FA200E17B8B /* NewFetureViewController.swift */; };
 		5A21504E1D2FA9F600E17B8B /* config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A21504D1D2FA9F600E17B8B /* config.swift */; };
+		5A5DED9D1D3F54AB00058525 /* MeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5DED9C1D3F54AB00058525 /* MeTableView.swift */; };
 		B2D9A413A7A1A59D29A95AAF /* Pods_swiftTaste.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFA8E95FD23B752C6C1A91EB /* Pods_swiftTaste.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,7 @@
 		5A2150471D2F9CE000E17B8B /* FourViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourViewController.swift; sourceTree = "<group>"; };
 		5A2150491D2F9FA200E17B8B /* NewFetureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewFetureViewController.swift; sourceTree = "<group>"; };
 		5A21504D1D2FA9F600E17B8B /* config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = config.swift; sourceTree = "<group>"; };
+		5A5DED9C1D3F54AB00058525 /* MeTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeTableView.swift; sourceTree = "<group>"; };
 		DFA8E95FD23B752C6C1A91EB /* Pods_swiftTaste.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swiftTaste.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -111,6 +113,7 @@
 				5A2150451D2F9CD500E17B8B /* ThirdViewController.swift */,
 				5A2150471D2F9CE000E17B8B /* FourViewController.swift */,
 				5A2150491D2F9FA200E17B8B /* NewFetureViewController.swift */,
+				5A5DED9C1D3F54AB00058525 /* MeTableView.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 				5A2150401D2F905B00E17B8B /* NavigationViewController.swift in Sources */,
 				5A21504E1D2FA9F600E17B8B /* config.swift in Sources */,
 				5A2150461D2F9CD500E17B8B /* ThirdViewController.swift in Sources */,
+				5A5DED9D1D3F54AB00058525 /* MeTableView.swift in Sources */,
 				5A21503E1D2F840300E17B8B /* CommentView.swift in Sources */,
 				5A21503B1D2F83AB00E17B8B /* AppDelegate.swift in Sources */,
 				5A21504A1D2F9FA200E17B8B /* NewFetureViewController.swift in Sources */,
