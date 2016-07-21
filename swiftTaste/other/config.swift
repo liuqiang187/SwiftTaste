@@ -24,6 +24,10 @@ public func NavBarColor() -> UIColor {
     return RGB(56, G: 57, B: 63)
 }
 
+public func DEFAULT_BACKGROUND_COLOR() -> UIColor {
+    return RGB(239, G: 239, B: 244)
+}
+
 public func kScreenWidth() -> CGFloat {
     return UIScreen.mainScreen().bounds.size.width
 }

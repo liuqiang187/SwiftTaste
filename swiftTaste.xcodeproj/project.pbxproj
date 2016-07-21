@@ -22,6 +22,10 @@
 		5A21504A1D2F9FA200E17B8B /* NewFetureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2150491D2F9FA200E17B8B /* NewFetureViewController.swift */; };
 		5A21504E1D2FA9F600E17B8B /* config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A21504D1D2FA9F600E17B8B /* config.swift */; };
 		5A5DED9D1D3F54AB00058525 /* MeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5DED9C1D3F54AB00058525 /* MeTableView.swift */; };
+		5AC7DFEA1D40799B00B77BA1 /* UIView+TL.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC7DFE91D40799B00B77BA1 /* UIView+TL.m */; };
+		5AC7DFED1D407A8300B77BA1 /* CommonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC7DFEC1D407A8300B77BA1 /* CommonTableViewCell.swift */; };
+		5AC7DFEF1D407AAC00B77BA1 /* CommonTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC7DFEE1D407AAC00B77BA1 /* CommonTableViewController.swift */; };
+		5AC7DFF11D407AC100B77BA1 /* CommonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC7DFF01D407AC100B77BA1 /* CommonViewController.swift */; };
 		B2D9A413A7A1A59D29A95AAF /* Pods_swiftTaste.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFA8E95FD23B752C6C1A91EB /* Pods_swiftTaste.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +51,11 @@
 		5A2150491D2F9FA200E17B8B /* NewFetureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewFetureViewController.swift; sourceTree = "<group>"; };
 		5A21504D1D2FA9F600E17B8B /* config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = config.swift; sourceTree = "<group>"; };
 		5A5DED9C1D3F54AB00058525 /* MeTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeTableView.swift; sourceTree = "<group>"; };
+		5AC7DFE81D40799B00B77BA1 /* UIView+TL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TL.h"; sourceTree = "<group>"; };
+		5AC7DFE91D40799B00B77BA1 /* UIView+TL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TL.m"; sourceTree = "<group>"; };
+		5AC7DFEC1D407A8300B77BA1 /* CommonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonTableViewCell.swift; sourceTree = "<group>"; };
+		5AC7DFEE1D407AAC00B77BA1 /* CommonTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonTableViewController.swift; sourceTree = "<group>"; };
+		5AC7DFF01D407AC100B77BA1 /* CommonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonViewController.swift; sourceTree = "<group>"; };
 		DFA8E95FD23B752C6C1A91EB /* Pods_swiftTaste.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swiftTaste.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -91,6 +100,7 @@
 		5A2150201D2F7D8100E17B8B /* swiftTaste */ = {
 			isa = PBXGroup;
 			children = (
+				5AC7DFEB1D407A6900B77BA1 /* common */,
 				5A21504C1D2FA9C900E17B8B /* other */,
 				5A2150331D2F83AB00E17B8B /* Controller */,
 				5A2150351D2F83AB00E17B8B /* Model */,
@@ -148,9 +158,29 @@
 		5A21504C1D2FA9C900E17B8B /* other */ = {
 			isa = PBXGroup;
 			children = (
+				5AC7DFE71D40797F00B77BA1 /* OC */,
 				5A21504D1D2FA9F600E17B8B /* config.swift */,
 			);
 			path = other;
+			sourceTree = "<group>";
+		};
+		5AC7DFE71D40797F00B77BA1 /* OC */ = {
+			isa = PBXGroup;
+			children = (
+				5AC7DFE81D40799B00B77BA1 /* UIView+TL.h */,
+				5AC7DFE91D40799B00B77BA1 /* UIView+TL.m */,
+			);
+			name = OC;
+			sourceTree = "<group>";
+		};
+		5AC7DFEB1D407A6900B77BA1 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				5AC7DFEC1D407A8300B77BA1 /* CommonTableViewCell.swift */,
+				5AC7DFEE1D407AAC00B77BA1 /* CommonTableViewController.swift */,
+				5AC7DFF01D407AC100B77BA1 /* CommonViewController.swift */,
+			);
+			path = common;
 			sourceTree = "<group>";
 		};
 		8984DD90934279430337F781 /* Pods */ = {
@@ -286,14 +316,18 @@
 			files = (
 				5A2150441D2F9CCB00E17B8B /* SecondViewController.swift in Sources */,
 				5A2150421D2F9CC100E17B8B /* FirstViewController.swift in Sources */,
+				5AC7DFED1D407A8300B77BA1 /* CommonTableViewCell.swift in Sources */,
 				5A2150401D2F905B00E17B8B /* NavigationViewController.swift in Sources */,
+				5AC7DFEF1D407AAC00B77BA1 /* CommonTableViewController.swift in Sources */,
 				5A21504E1D2FA9F600E17B8B /* config.swift in Sources */,
+				5AC7DFEA1D40799B00B77BA1 /* UIView+TL.m in Sources */,
 				5A2150461D2F9CD500E17B8B /* ThirdViewController.swift in Sources */,
 				5A5DED9D1D3F54AB00058525 /* MeTableView.swift in Sources */,
 				5A21503E1D2F840300E17B8B /* CommentView.swift in Sources */,
 				5A21503B1D2F83AB00E17B8B /* AppDelegate.swift in Sources */,
 				5A21504A1D2F9FA200E17B8B /* NewFetureViewController.swift in Sources */,
 				5A2150481D2F9CE000E17B8B /* FourViewController.swift in Sources */,
+				5AC7DFF11D407AC100B77BA1 /* CommonViewController.swift in Sources */,
 				5A21503A1D2F83AB00E17B8B /* MainViewController.swift in Sources */,
 				5A0A4F461D3E240B00A61418 /* temp.m in Sources */,
 			);
