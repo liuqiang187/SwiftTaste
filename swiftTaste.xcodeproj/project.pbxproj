@@ -21,11 +21,15 @@
 		5A2150481D2F9CE000E17B8B /* FourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2150471D2F9CE000E17B8B /* FourViewController.swift */; };
 		5A21504A1D2F9FA200E17B8B /* NewFetureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2150491D2F9FA200E17B8B /* NewFetureViewController.swift */; };
 		5A21504E1D2FA9F600E17B8B /* config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A21504D1D2FA9F600E17B8B /* config.swift */; };
-		5A5DED9D1D3F54AB00058525 /* MeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5DED9C1D3F54AB00058525 /* MeTableView.swift */; };
+		5A5DED9D1D3F54AB00058525 /* MeSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5DED9C1D3F54AB00058525 /* MeSettingView.swift */; };
 		5AC7DFEA1D40799B00B77BA1 /* UIView+TL.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC7DFE91D40799B00B77BA1 /* UIView+TL.m */; };
 		5AC7DFED1D407A8300B77BA1 /* CommonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC7DFEC1D407A8300B77BA1 /* CommonTableViewCell.swift */; };
 		5AC7DFEF1D407AAC00B77BA1 /* CommonTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC7DFEE1D407AAC00B77BA1 /* CommonTableViewController.swift */; };
 		5AC7DFF11D407AC100B77BA1 /* CommonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC7DFF01D407AC100B77BA1 /* CommonViewController.swift */; };
+		5AC7E0091D40A24300B77BA1 /* WXSettingBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC7E0081D40A24300B77BA1 /* WXSettingBaseViewController.swift */; };
+		5AC7E00B1D40A36500B77BA1 /* WXSettingHeaderFooteFView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC7E00A1D40A36500B77BA1 /* WXSettingHeaderFooteFView.swift */; };
+		5AC7E00D1D40A37D00B77BA1 /* WXSettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC7E00C1D40A37D00B77BA1 /* WXSettingCell.swift */; };
+		5AC7E00F1D40A59B00B77BA1 /* WXSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC7E00E1D40A59B00B77BA1 /* WXSetting.swift */; };
 		B2D9A413A7A1A59D29A95AAF /* Pods_swiftTaste.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFA8E95FD23B752C6C1A91EB /* Pods_swiftTaste.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,12 +54,16 @@
 		5A2150471D2F9CE000E17B8B /* FourViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourViewController.swift; sourceTree = "<group>"; };
 		5A2150491D2F9FA200E17B8B /* NewFetureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewFetureViewController.swift; sourceTree = "<group>"; };
 		5A21504D1D2FA9F600E17B8B /* config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = config.swift; sourceTree = "<group>"; };
-		5A5DED9C1D3F54AB00058525 /* MeTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeTableView.swift; sourceTree = "<group>"; };
+		5A5DED9C1D3F54AB00058525 /* MeSettingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeSettingView.swift; sourceTree = "<group>"; };
 		5AC7DFE81D40799B00B77BA1 /* UIView+TL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TL.h"; sourceTree = "<group>"; };
 		5AC7DFE91D40799B00B77BA1 /* UIView+TL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TL.m"; sourceTree = "<group>"; };
 		5AC7DFEC1D407A8300B77BA1 /* CommonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonTableViewCell.swift; sourceTree = "<group>"; };
 		5AC7DFEE1D407AAC00B77BA1 /* CommonTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonTableViewController.swift; sourceTree = "<group>"; };
 		5AC7DFF01D407AC100B77BA1 /* CommonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonViewController.swift; sourceTree = "<group>"; };
+		5AC7E0081D40A24300B77BA1 /* WXSettingBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WXSettingBaseViewController.swift; path = Setting/WXSettingBaseViewController.swift; sourceTree = "<group>"; };
+		5AC7E00A1D40A36500B77BA1 /* WXSettingHeaderFooteFView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WXSettingHeaderFooteFView.swift; path = Setting/WXSettingHeaderFooteFView.swift; sourceTree = "<group>"; };
+		5AC7E00C1D40A37D00B77BA1 /* WXSettingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WXSettingCell.swift; path = Setting/WXSettingCell.swift; sourceTree = "<group>"; };
+		5AC7E00E1D40A59B00B77BA1 /* WXSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WXSetting.swift; path = Setting/WXSetting.swift; sourceTree = "<group>"; };
 		DFA8E95FD23B752C6C1A91EB /* Pods_swiftTaste.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swiftTaste.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -116,6 +124,7 @@
 		5A2150331D2F83AB00E17B8B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				5AC7E0051D40A1CD00B77BA1 /* settting */,
 				5A2150341D2F83AB00E17B8B /* MainViewController.swift */,
 				5A21503F1D2F905B00E17B8B /* NavigationViewController.swift */,
 				5A2150411D2F9CC100E17B8B /* FirstViewController.swift */,
@@ -123,7 +132,7 @@
 				5A2150451D2F9CD500E17B8B /* ThirdViewController.swift */,
 				5A2150471D2F9CE000E17B8B /* FourViewController.swift */,
 				5A2150491D2F9FA200E17B8B /* NewFetureViewController.swift */,
-				5A5DED9C1D3F54AB00058525 /* MeTableView.swift */,
+				5A5DED9C1D3F54AB00058525 /* MeSettingView.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -181,6 +190,17 @@
 				5AC7DFF01D407AC100B77BA1 /* CommonViewController.swift */,
 			);
 			path = common;
+			sourceTree = "<group>";
+		};
+		5AC7E0051D40A1CD00B77BA1 /* settting */ = {
+			isa = PBXGroup;
+			children = (
+				5AC7E0081D40A24300B77BA1 /* WXSettingBaseViewController.swift */,
+				5AC7E00A1D40A36500B77BA1 /* WXSettingHeaderFooteFView.swift */,
+				5AC7E00C1D40A37D00B77BA1 /* WXSettingCell.swift */,
+				5AC7E00E1D40A59B00B77BA1 /* WXSetting.swift */,
+			);
+			name = settting;
 			sourceTree = "<group>";
 		};
 		8984DD90934279430337F781 /* Pods */ = {
@@ -316,15 +336,19 @@
 			files = (
 				5A2150441D2F9CCB00E17B8B /* SecondViewController.swift in Sources */,
 				5A2150421D2F9CC100E17B8B /* FirstViewController.swift in Sources */,
+				5AC7E00B1D40A36500B77BA1 /* WXSettingHeaderFooteFView.swift in Sources */,
 				5AC7DFED1D407A8300B77BA1 /* CommonTableViewCell.swift in Sources */,
 				5A2150401D2F905B00E17B8B /* NavigationViewController.swift in Sources */,
+				5AC7E00D1D40A37D00B77BA1 /* WXSettingCell.swift in Sources */,
 				5AC7DFEF1D407AAC00B77BA1 /* CommonTableViewController.swift in Sources */,
 				5A21504E1D2FA9F600E17B8B /* config.swift in Sources */,
 				5AC7DFEA1D40799B00B77BA1 /* UIView+TL.m in Sources */,
 				5A2150461D2F9CD500E17B8B /* ThirdViewController.swift in Sources */,
-				5A5DED9D1D3F54AB00058525 /* MeTableView.swift in Sources */,
+				5A5DED9D1D3F54AB00058525 /* MeSettingView.swift in Sources */,
+				5AC7E00F1D40A59B00B77BA1 /* WXSetting.swift in Sources */,
 				5A21503E1D2F840300E17B8B /* CommentView.swift in Sources */,
 				5A21503B1D2F83AB00E17B8B /* AppDelegate.swift in Sources */,
+				5AC7E0091D40A24300B77BA1 /* WXSettingBaseViewController.swift in Sources */,
 				5A21504A1D2F9FA200E17B8B /* NewFetureViewController.swift in Sources */,
 				5A2150481D2F9CE000E17B8B /* FourViewController.swift in Sources */,
 				5AC7DFF11D407AC100B77BA1 /* CommonViewController.swift in Sources */,
