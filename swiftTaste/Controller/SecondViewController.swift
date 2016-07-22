@@ -35,6 +35,7 @@ class SecondViewController: UIViewController {
             make.height.equalTo(100)
             make.width.equalTo(100)
         }
+        view.addSubview(imageView)
     }
     
     func btnClick(){
@@ -43,7 +44,6 @@ class SecondViewController: UIViewController {
                 make.centerY.equalTo(self.view.snp_centerY).offset(100)
             }
         }
-        view.addSubview(imageView)
         imageView.snp_makeConstraints { (make) in
             make.centerX.equalTo(view.snp_centerX)
             make.centerY.equalTo(view.snp_centerY)
@@ -54,19 +54,6 @@ class SecondViewController: UIViewController {
         imageView.animationDuration = 0.5
         imageView.animationRepeatCount = 20
         imageView.startAnimating()
-    }
-    
-     override func animationDidStop(anim: CAAnimation, finished flag: Bool) {
-        if flag == true {
-            UIView.animateWithDuration(0.5) {
-                self.inputBtn.snp_updateConstraints { (make) in
-                    make.centerX.equalTo(self.view.snp_centerX)
-                    make.centerY.equalTo(self.view.snp_centerY)
-                    make.height.equalTo(100)
-                    make.width.equalTo(100)
-                }
-            }
-        }
     }
 
     // MARK: - lazy var
@@ -79,8 +66,6 @@ class SecondViewController: UIViewController {
         return btn
     }()
 
-    private lazy var imageView : UIImageView = {
-        let imgView = UIImageView()
-        return imgView
-    }()
+    private lazy var imageView = UIImageView()
+    
 }
