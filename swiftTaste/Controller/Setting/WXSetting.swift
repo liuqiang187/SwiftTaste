@@ -86,8 +86,6 @@ class WXSettingItem: NSObject {
         item.rightImageName = rightImageName
         item.title = title
         item.subTitle = subTitle
-        item.type = .WXSettingItemTypeDefault
-        item.alignment = .WXSettingItemAlignmentLeft
         return item
     }
     

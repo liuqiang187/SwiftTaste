@@ -21,12 +21,12 @@ class CommonTableViewCell: UITableViewCell {
         didSet{
             if bottomLineStyle == .CellLineStyleDefault {
                 bottomLine.originX = leftFreeSpace
-                bottomLine.frameWidth = self.frameWidth - leftFreeSpace
+                bottomLine.frameWidth = kScreenWidth() - leftFreeSpace
                 bottomLine.hidden = false
             }
             else if bottomLineStyle == .CellLineStyleFill{
                 bottomLine.originX = 0
-                bottomLine.frameWidth = self.frameWidth
+                bottomLine.frameWidth = kScreenWidth()
                 bottomLine.hidden = false
             }
             else if bottomLineStyle == .CellLineStyleNone{
@@ -38,12 +38,12 @@ class CommonTableViewCell: UITableViewCell {
         didSet{
             if topLineStyle == .CellLineStyleDefault {
                 topLine.originX = leftFreeSpace
-                topLine.frameWidth = self.frameWidth - leftFreeSpace
+                topLine.frameWidth = kScreenWidth() - leftFreeSpace
                 topLine.hidden = false
             }
             else if topLineStyle == .CellLineStyleFill{
                 topLine.originX = 0
-                topLine.frameWidth = self.frameWidth
+                topLine.frameWidth = kScreenWidth()
                 topLine.hidden = false
             }
             else if topLineStyle == .CellLineStyleNone{
@@ -52,10 +52,16 @@ class CommonTableViewCell: UITableViewCell {
         }
     }
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
         backgroundColor = UIColor.whiteColor()
+        addSubview(topLine)
+        addSubview(bottomLine)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     override func layoutSubviews() {
