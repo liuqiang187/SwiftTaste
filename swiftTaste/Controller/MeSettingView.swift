@@ -15,6 +15,8 @@ class MeSettingView: WXSettingBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.title = "设置"
+        
         data = getSettingVCItems()
     }
     
