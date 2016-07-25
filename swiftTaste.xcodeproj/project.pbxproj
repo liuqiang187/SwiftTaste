@@ -27,6 +27,7 @@
 		5AB70B031D45E70E00551144 /* WXUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB70B021D45E70E00551144 /* WXUser.swift */; };
 		5AB70B051D45FA6500551144 /* MeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB70B041D45FA6500551144 /* MeDetailViewController.swift */; };
 		5AB70B071D460D9600551144 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB70B061D460D9600551144 /* DiscoverViewController.swift */; };
+		5AB70B091D46132400551144 /* WXConfigData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB70B081D46132400551144 /* WXConfigData.swift */; };
 		5AC7DFEA1D40799B00B77BA1 /* UIView+TL.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC7DFE91D40799B00B77BA1 /* UIView+TL.m */; };
 		5AC7DFED1D407A8300B77BA1 /* CommonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC7DFEC1D407A8300B77BA1 /* CommonTableViewCell.swift */; };
 		5AC7DFEF1D407AAC00B77BA1 /* CommonTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC7DFEE1D407AAC00B77BA1 /* CommonTableViewController.swift */; };
@@ -65,6 +66,7 @@
 		5AB70B021D45E70E00551144 /* WXUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WXUser.swift; path = Setting/WXUser.swift; sourceTree = "<group>"; };
 		5AB70B041D45FA6500551144 /* MeDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeDetailViewController.swift; sourceTree = "<group>"; };
 		5AB70B061D460D9600551144 /* DiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
+		5AB70B081D46132400551144 /* WXConfigData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WXConfigData.swift; sourceTree = "<group>"; };
 		5AC7DFE81D40799B00B77BA1 /* UIView+TL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TL.h"; sourceTree = "<group>"; };
 		5AC7DFE91D40799B00B77BA1 /* UIView+TL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TL.m"; sourceTree = "<group>"; };
 		5AC7DFEC1D407A8300B77BA1 /* CommonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonTableViewCell.swift; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 			children = (
 				5AC7DFE71D40797F00B77BA1 /* OC */,
 				5A21504D1D2FA9F600E17B8B /* config.swift */,
+				5AB70B081D46132400551144 /* WXConfigData.swift */,
 			);
 			path = other;
 			sourceTree = "<group>";
@@ -353,6 +356,7 @@
 				5A2150421D2F9CC100E17B8B /* FirstViewController.swift in Sources */,
 				5AC7E00B1D40A36500B77BA1 /* WXSettingHeaderFooteFView.swift in Sources */,
 				5AC7DFED1D407A8300B77BA1 /* CommonTableViewCell.swift in Sources */,
+				5AB70B091D46132400551144 /* WXConfigData.swift in Sources */,
 				5A2150401D2F905B00E17B8B /* NavigationViewController.swift in Sources */,
 				5AC7E00D1D40A37D00B77BA1 /* WXSettingCell.swift in Sources */,
 				5AC7DFEF1D407AAC00B77BA1 /* CommonTableViewController.swift in Sources */,
