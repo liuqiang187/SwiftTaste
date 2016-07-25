@@ -57,4 +57,28 @@ class NewFetureViewController: UITableViewController {
     //点击block
     var clickBlock : ((type : String) -> ())?
     
+    override func scrollViewDidScroll(scrollView: UIScrollView) {
+        let offsetY = scrollView.contentOffset.y;
+        if (offsetY > 0) {
+            if (offsetY >= 44) {
+                setNavigationBarTransformProgress(1)
+            } else {
+                setNavigationBarTransformProgress(offsetY / 44)
+            }
+        } else {
+            setNavigationBarTransformProgress(0)
+            navigationController?.navigationBar.backIndicatorImage = UIImage.init();
+        }
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.navigationBar.lt_reset()
+        navigationController?.navigationBar.lt_setTranslationY(0)
+    }
+    
+    private func setNavigationBarTransformProgress(progress: CGFloat) {
+        navigationController?.navigationBar.lt_setTranslationY(-44 * progress)
+        navigationController?.navigationBar.lt_setElementsAlpha(1-progress)
+    }
 }

@@ -15,8 +15,10 @@ class ThirdViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        navigationItem.title = "朋友"
+        navigationItem.title = "Hi"
         
-        view.backgroundColor = RGB(39, G: 139, B: 239)
+//        view.backgroundColor = RGB(39, G: 139, B: 239)
+        view.backgroundColor = UIColor.whiteColor()
+        
     }
 }

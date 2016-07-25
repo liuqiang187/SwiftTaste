@@ -21,9 +21,20 @@ class FirstViewController: UIViewController {
         
         view.backgroundColor = UIColor.whiteColor()
         
+        NSThread.sleepForTimeInterval(2.0)//延长2秒
+        
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(FirstViewController.changeOffset), name: TextField_Change, object: nil)
         
         setup()
+    }
+    
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return UIStatusBarStyle.LightContent
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.lt_setBackgroundColor(NavBarColor())
     }
     
     private func setup()
@@ -40,7 +51,7 @@ class FirstViewController: UIViewController {
     func btnClick()
     {
         let vc = NewFetureViewController()
-        
+//        let vc = MeSettingView()
         navigationController?.pushViewController(vc, animated: true)
         
         vc.clickBlock = { type in

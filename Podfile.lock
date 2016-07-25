@@ -1,18 +1,24 @@
 PODS:
   - Alamofire (3.2.1)
   - FDFullscreenPopGesture (1.1)
+  - Kingfisher (2.1.0)
+  - LTNavigationBar (2.1.2)
   - SnapKit (0.19.1)
 
 DEPENDENCIES:
   - Alamofire
   - FDFullscreenPopGesture
+  - Kingfisher
+  - LTNavigationBar
   - SnapKit
 
 SPEC CHECKSUMS:
   Alamofire: f11d8624a05f5d39e0c99309b3e600a3ba64298a
   FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
+  Kingfisher: 3ac09acad75a25ab22f6d7cef3de10d61dd4792d
+  LTNavigationBar: bfc5fc06a83463009b9d99675f2a32dcbb631b00
   SnapKit: eff58d6e3451bf2f482db2eccf86aecf371dc62d
 
-PODFILE CHECKSUM: 9595a0e2fbb579e05bbab41c3809afea1f1d04eb
+PODFILE CHECKSUM: 491ad20847df77cdfcab5c056489fb905789a5f8
 
 COCOAPODS: 1.0.1
