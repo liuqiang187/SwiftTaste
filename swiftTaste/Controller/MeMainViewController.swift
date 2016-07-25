@@ -70,7 +70,8 @@ class MeMainViewController: WXSettingBaseViewController {
         
         var vc : UIViewController?
         if (indexPath.section == 0 && indexPath.row == 0) {
-            
+            vc = MeDetailViewController()
+            navigationController?.pushViewController(vc!, animated: true)
         }
         else{
             let group = data.objectAtIndex(indexPath.section - 1) as! WXSettingGrounp
