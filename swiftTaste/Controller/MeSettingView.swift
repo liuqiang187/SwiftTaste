@@ -8,8 +8,6 @@
 
 import UIKit
 
-private let CellReuseIdentifier = "FCellReuseIdentifier"
-
 class MeSettingView: WXSettingBaseViewController {
 
     override func viewDidLoad() {

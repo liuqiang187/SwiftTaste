@@ -50,13 +50,13 @@ class FirstViewController: UIViewController {
     
     func btnClick()
     {
-//        let vc = NewFetureViewController()
-        let vc = MeSettingView()
+        let vc = NewFetureViewController()
+//        let vc = MeSettingView()
         navigationController?.pushViewController(vc, animated: true)
         
-//        vc.clickBlock = { type in
-//            self.inputBtn.setTitle("点击" + type, forState: .Normal)
-//        }
+        vc.clickBlock = { type in
+            self.inputBtn.setTitle("点击" + type, forState: .Normal)
+        }
     }
     
     private lazy var inputBtn : UIButton = {

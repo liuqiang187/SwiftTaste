@@ -143,25 +143,25 @@ class WXSettingCell: CommonTableViewCell  {
             }
             if (self.item.rightImageName != nil){
                 let rh = self.frameHeight * CGFloat(self.item.rightImageHeightOfCell)
-                let ry = (self.frameHeight - rh) / 2;
+                let ry = (self.frameHeight - rh) / 2
                 rx -= rh;
                 rightImageView.frame = CGRectMake(rx, ry, rh, rh)
-                rx -= rh * 0.15;
+                rx -= rh * 0.15
             }
             
             if (self.item.subTitle != nil){
                 size = subTitleLabel.sizeThatFits(CGSizeMake(CGFloat(MAXFLOAT), CGFloat(MAXFLOAT)))
-                rx -= size.width;
+                rx -= size.width
                 subTitleLabel.frame = CGRectMake(rx, y - 0.5, size.width, h)
-                rx -= 5;
+                rx -= 5
             }
             
             if (self.item.middleImageName != nil){
                 let mh = self.frameHeight * CGFloat(self.item.middleImageHeightOfCell);
-                let my = (self.frameHeight - mh) / 2 - 0.5;
-                rx -= mh;
+                let my = (self.frameHeight - mh) / 2 - 0.5
+                rx -= mh
                 middleImageView.frame = CGRectMake(rx, my, mh, mh)
-                rx -= mh * 0.15;
+                rx -= mh * 0.15
             }
         }
         else if item.alignment == .WXSettingItemAlignmentLeft{

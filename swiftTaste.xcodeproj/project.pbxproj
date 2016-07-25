@@ -22,6 +22,9 @@
 		5A21504A1D2F9FA200E17B8B /* NewFetureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2150491D2F9FA200E17B8B /* NewFetureViewController.swift */; };
 		5A21504E1D2FA9F600E17B8B /* config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A21504D1D2FA9F600E17B8B /* config.swift */; };
 		5A5DED9D1D3F54AB00058525 /* MeSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5DED9C1D3F54AB00058525 /* MeSettingView.swift */; };
+		5AB70AFF1D45E37D00551144 /* MeMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB70AFE1D45E37D00551144 /* MeMainViewController.swift */; };
+		5AB70B011D45E42A00551144 /* WXUserDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB70B001D45E42A00551144 /* WXUserDetailCell.swift */; };
+		5AB70B031D45E70E00551144 /* WXUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB70B021D45E70E00551144 /* WXUser.swift */; };
 		5AC7DFEA1D40799B00B77BA1 /* UIView+TL.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC7DFE91D40799B00B77BA1 /* UIView+TL.m */; };
 		5AC7DFED1D407A8300B77BA1 /* CommonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC7DFEC1D407A8300B77BA1 /* CommonTableViewCell.swift */; };
 		5AC7DFEF1D407AAC00B77BA1 /* CommonTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC7DFEE1D407AAC00B77BA1 /* CommonTableViewController.swift */; };
@@ -55,6 +58,9 @@
 		5A2150491D2F9FA200E17B8B /* NewFetureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewFetureViewController.swift; sourceTree = "<group>"; };
 		5A21504D1D2FA9F600E17B8B /* config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = config.swift; sourceTree = "<group>"; };
 		5A5DED9C1D3F54AB00058525 /* MeSettingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeSettingView.swift; sourceTree = "<group>"; };
+		5AB70AFE1D45E37D00551144 /* MeMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeMainViewController.swift; sourceTree = "<group>"; };
+		5AB70B001D45E42A00551144 /* WXUserDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WXUserDetailCell.swift; path = Setting/WXUserDetailCell.swift; sourceTree = "<group>"; };
+		5AB70B021D45E70E00551144 /* WXUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WXUser.swift; path = Setting/WXUser.swift; sourceTree = "<group>"; };
 		5AC7DFE81D40799B00B77BA1 /* UIView+TL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TL.h"; sourceTree = "<group>"; };
 		5AC7DFE91D40799B00B77BA1 /* UIView+TL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TL.m"; sourceTree = "<group>"; };
 		5AC7DFEC1D407A8300B77BA1 /* CommonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonTableViewCell.swift; sourceTree = "<group>"; };
@@ -133,6 +139,7 @@
 				5A2150471D2F9CE000E17B8B /* FourViewController.swift */,
 				5A2150491D2F9FA200E17B8B /* NewFetureViewController.swift */,
 				5A5DED9C1D3F54AB00058525 /* MeSettingView.swift */,
+				5AB70AFE1D45E37D00551144 /* MeMainViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -199,6 +206,8 @@
 				5AC7E00A1D40A36500B77BA1 /* WXSettingHeaderFooteFView.swift */,
 				5AC7E00C1D40A37D00B77BA1 /* WXSettingCell.swift */,
 				5AC7E00E1D40A59B00B77BA1 /* WXSetting.swift */,
+				5AB70B001D45E42A00551144 /* WXUserDetailCell.swift */,
+				5AB70B021D45E70E00551144 /* WXUser.swift */,
 			);
 			name = settting;
 			sourceTree = "<group>";
@@ -348,9 +357,12 @@
 				5AC7E00F1D40A59B00B77BA1 /* WXSetting.swift in Sources */,
 				5A21503E1D2F840300E17B8B /* CommentView.swift in Sources */,
 				5A21503B1D2F83AB00E17B8B /* AppDelegate.swift in Sources */,
+				5AB70B011D45E42A00551144 /* WXUserDetailCell.swift in Sources */,
 				5AC7E0091D40A24300B77BA1 /* WXSettingBaseViewController.swift in Sources */,
 				5A21504A1D2F9FA200E17B8B /* NewFetureViewController.swift in Sources */,
+				5AB70B031D45E70E00551144 /* WXUser.swift in Sources */,
 				5A2150481D2F9CE000E17B8B /* FourViewController.swift in Sources */,
+				5AB70AFF1D45E37D00551144 /* MeMainViewController.swift in Sources */,
 				5AC7DFF11D407AC100B77BA1 /* CommonViewController.swift in Sources */,
 				5A21503A1D2F83AB00E17B8B /* MainViewController.swift in Sources */,
 				5A0A4F461D3E240B00A61418 /* temp.m in Sources */,
