@@ -26,6 +26,7 @@
 		5AB70B011D45E42A00551144 /* WXUserDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB70B001D45E42A00551144 /* WXUserDetailCell.swift */; };
 		5AB70B031D45E70E00551144 /* WXUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB70B021D45E70E00551144 /* WXUser.swift */; };
 		5AB70B051D45FA6500551144 /* MeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB70B041D45FA6500551144 /* MeDetailViewController.swift */; };
+		5AB70B071D460D9600551144 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB70B061D460D9600551144 /* DiscoverViewController.swift */; };
 		5AC7DFEA1D40799B00B77BA1 /* UIView+TL.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC7DFE91D40799B00B77BA1 /* UIView+TL.m */; };
 		5AC7DFED1D407A8300B77BA1 /* CommonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC7DFEC1D407A8300B77BA1 /* CommonTableViewCell.swift */; };
 		5AC7DFEF1D407AAC00B77BA1 /* CommonTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC7DFEE1D407AAC00B77BA1 /* CommonTableViewController.swift */; };
@@ -63,6 +64,7 @@
 		5AB70B001D45E42A00551144 /* WXUserDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WXUserDetailCell.swift; path = Setting/WXUserDetailCell.swift; sourceTree = "<group>"; };
 		5AB70B021D45E70E00551144 /* WXUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WXUser.swift; path = Setting/WXUser.swift; sourceTree = "<group>"; };
 		5AB70B041D45FA6500551144 /* MeDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeDetailViewController.swift; sourceTree = "<group>"; };
+		5AB70B061D460D9600551144 /* DiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
 		5AC7DFE81D40799B00B77BA1 /* UIView+TL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TL.h"; sourceTree = "<group>"; };
 		5AC7DFE91D40799B00B77BA1 /* UIView+TL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TL.m"; sourceTree = "<group>"; };
 		5AC7DFEC1D407A8300B77BA1 /* CommonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonTableViewCell.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				5A5DED9C1D3F54AB00058525 /* MeSettingView.swift */,
 				5AB70AFE1D45E37D00551144 /* MeMainViewController.swift */,
 				5AB70B041D45FA6500551144 /* MeDetailViewController.swift */,
+				5AB70B061D460D9600551144 /* DiscoverViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -370,6 +373,7 @@
 				5AC7DFF11D407AC100B77BA1 /* CommonViewController.swift in Sources */,
 				5A21503A1D2F83AB00E17B8B /* MainViewController.swift in Sources */,
 				5A0A4F461D3E240B00A61418 /* temp.m in Sources */,
+				5AB70B071D460D9600551144 /* DiscoverViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

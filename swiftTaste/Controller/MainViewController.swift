@@ -24,7 +24,7 @@ class MainViewController: UITabBarController, UITabBarControllerDelegate {
         
         addViewController(FirstViewController(), title: "chat", icon: "tabbar_mainframe", iconPress: "tabbar_mainframeHL")
         addViewController(SecondViewController(), title: "friend", icon: "tabbar_contacts", iconPress: "tabbar_contactsHL")
-        addViewController(ThirdViewController(), title: "hi", icon: "tabbar_discover", iconPress: "tabbar_discoverHL")
+        addViewController(DiscoverViewController(), title: "hi", icon: "tabbar_discover", iconPress: "tabbar_discoverHL")
         addViewController(MeMainViewController(), title: "me", icon: "tabbar_me", iconPress: "tabbar_meHL")
     }
     
