@@ -71,17 +71,17 @@ class FourViewController: UIViewController, UITableViewDelegate, UITableViewData
     func updateHeaderImageViewFrameWithOffsetY(offsetY: CGFloat)
     {
         if (offsetY > 0) {
-            backImg.frame = self.originalHeaderImageViewFrame;
-            return;
+            backImg.frame = self.originalHeaderImageViewFrame
+            return
         }
         if (self.originalHeaderImageViewFrame.size.height - offsetY < 0) {
-            return;
+            return
         }
-        let x :CGFloat = self.originalHeaderImageViewFrame.origin.x;
-        let y :CGFloat = self.originalHeaderImageViewFrame.origin.y + offsetY;
-        let width :CGFloat = self.originalHeaderImageViewFrame.size.width;
-        let height :CGFloat = self.originalHeaderImageViewFrame.size.height - offsetY;
-        backImg.frame = CGRectMake(x, y, width, height);
+        let x :CGFloat = self.originalHeaderImageViewFrame.origin.x
+        let y :CGFloat = self.originalHeaderImageViewFrame.origin.y + offsetY
+        let width :CGFloat = self.originalHeaderImageViewFrame.size.width
+        let height :CGFloat = self.originalHeaderImageViewFrame.size.height - offsetY
+        backImg.frame = CGRectMake(x, y, width, height)
     }
     
     // MARK: - Table view data source
