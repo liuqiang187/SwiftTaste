@@ -9,7 +9,78 @@
 import UIKit
 
 class WXConfigData: NSObject {
+    
+    class func getFriendListDataBy(array :[WXUser]) -> ([[WXUser]]) {
+        
+        var all = [[WXUser]]()
+        
+        for item in array {
+            var arr = [WXUser]()
+            arr.append(item)
+            all.append(arr)
+        }
+        
+        return all
+    }
+    
+    class func getFriendListSectionBy(array :[WXUser]) -> ([String]) {
+        
+        var all = [String]()
+        
+        for item in array {
+            
+            let c = item.username?.characters.first
+            all.append(String.init(c!))
+        }
+        
+        return all
+    }
 
+    class func initFriendsTestData() -> ([WXUser]) {
+        var items = [WXUser]()
+        let user1 = WXUser()
+        user1.username = "吕轻侯"
+        user1.nikename = "侯哥"
+        user1.userID = "yun"
+        user1.avatarURL = "dice_Action_0"
+        items.append(user1)
+        
+        let user2 = WXUser()
+        user2.username = "吕轻侯"
+        user2.nikename = "侯哥"
+        user2.userID = "yun"
+        user2.avatarURL = "dice_Action_1"
+        items.append(user2)
+        
+        let user3 = WXUser()
+        user3.username = "吕轻侯"
+        user3.nikename = "侯哥"
+        user3.userID = "yun"
+        user3.avatarURL = "dice_Action_2"
+        items.append(user3)
+        
+        let user4 = WXUser()
+        user4.username = "吕轻侯"
+        user4.nikename = "侯哥"
+        user4.userID = "yun"
+        user4.avatarURL = "dice_Action_3"
+        items.append(user4)
+        
+        return items
+    }
+    
+    class func getFriendsVCItems() -> WXSettingGrounp {
+        
+        let notify = WXSettingItem.createWithImageName("plugins_FriendNotify_36x36_", title: "新的朋友")
+        let friendGroup = WXSettingItem.createWithImageName("add_friend_icon_addgroup_36x36_", title: "群聊")
+        let tag = WXSettingItem.createWithImageName("Contact_icon_ContactTag_36x36_", title: "标签")
+        let offical = WXSettingItem.createWithImageName("add_friend_icon_offical_36x36_", title: "公众号")
+        let group = WXSettingGrounp()
+        group.items = [notify,friendGroup,tag,offical]
+        
+        return group
+    }
+    
     class func getDiscoverVCItems() -> [WXSettingGrounp] {
         var items = [WXSettingGrounp]()
         

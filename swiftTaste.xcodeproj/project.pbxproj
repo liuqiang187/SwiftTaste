@@ -21,6 +21,10 @@
 		5A2150481D2F9CE000E17B8B /* FourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2150471D2F9CE000E17B8B /* FourViewController.swift */; };
 		5A21504A1D2F9FA200E17B8B /* NewFetureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2150491D2F9FA200E17B8B /* NewFetureViewController.swift */; };
 		5A21504E1D2FA9F600E17B8B /* config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A21504D1D2FA9F600E17B8B /* config.swift */; };
+		5A3F352B1D47362500BEC9B3 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3F352A1D47362500BEC9B3 /* FriendsViewController.swift */; };
+		5A3F352D1D47387700BEC9B3 /* FriendSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3F352C1D47387700BEC9B3 /* FriendSearchViewController.swift */; };
+		5A3F352F1D473FB600BEC9B3 /* WXFriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3F352E1D473FB600BEC9B3 /* WXFriendCell.swift */; };
+		5A3F35381D475C4B00BEC9B3 /* WXFriendHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3F35371D475C4B00BEC9B3 /* WXFriendHeaderView.swift */; };
 		5A5DED9D1D3F54AB00058525 /* MeSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5DED9C1D3F54AB00058525 /* MeSettingView.swift */; };
 		5AB70AFF1D45E37D00551144 /* MeMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB70AFE1D45E37D00551144 /* MeMainViewController.swift */; };
 		5AB70B011D45E42A00551144 /* WXUserDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB70B001D45E42A00551144 /* WXUserDetailCell.swift */; };
@@ -60,6 +64,10 @@
 		5A2150471D2F9CE000E17B8B /* FourViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourViewController.swift; sourceTree = "<group>"; };
 		5A2150491D2F9FA200E17B8B /* NewFetureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewFetureViewController.swift; sourceTree = "<group>"; };
 		5A21504D1D2FA9F600E17B8B /* config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = config.swift; sourceTree = "<group>"; };
+		5A3F352A1D47362500BEC9B3 /* FriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
+		5A3F352C1D47387700BEC9B3 /* FriendSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendSearchViewController.swift; sourceTree = "<group>"; };
+		5A3F352E1D473FB600BEC9B3 /* WXFriendCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WXFriendCell.swift; path = Setting/WXFriendCell.swift; sourceTree = "<group>"; };
+		5A3F35371D475C4B00BEC9B3 /* WXFriendHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WXFriendHeaderView.swift; path = Setting/WXFriendHeaderView.swift; sourceTree = "<group>"; };
 		5A5DED9C1D3F54AB00058525 /* MeSettingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeSettingView.swift; sourceTree = "<group>"; };
 		5AB70AFE1D45E37D00551144 /* MeMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeMainViewController.swift; sourceTree = "<group>"; };
 		5AB70B001D45E42A00551144 /* WXUserDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WXUserDetailCell.swift; path = Setting/WXUserDetailCell.swift; sourceTree = "<group>"; };
@@ -148,6 +156,8 @@
 				5AB70AFE1D45E37D00551144 /* MeMainViewController.swift */,
 				5AB70B041D45FA6500551144 /* MeDetailViewController.swift */,
 				5AB70B061D460D9600551144 /* DiscoverViewController.swift */,
+				5A3F352A1D47362500BEC9B3 /* FriendsViewController.swift */,
+				5A3F352C1D47387700BEC9B3 /* FriendSearchViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -217,6 +227,8 @@
 				5AC7E00E1D40A59B00B77BA1 /* WXSetting.swift */,
 				5AB70B001D45E42A00551144 /* WXUserDetailCell.swift */,
 				5AB70B021D45E70E00551144 /* WXUser.swift */,
+				5A3F352E1D473FB600BEC9B3 /* WXFriendCell.swift */,
+				5A3F35371D475C4B00BEC9B3 /* WXFriendHeaderView.swift */,
 			);
 			name = settting;
 			sourceTree = "<group>";
@@ -362,6 +374,7 @@
 				5AC7DFEF1D407AAC00B77BA1 /* CommonTableViewController.swift in Sources */,
 				5A21504E1D2FA9F600E17B8B /* config.swift in Sources */,
 				5AC7DFEA1D40799B00B77BA1 /* UIView+TL.m in Sources */,
+				5A3F352B1D47362500BEC9B3 /* FriendsViewController.swift in Sources */,
 				5A2150461D2F9CD500E17B8B /* ThirdViewController.swift in Sources */,
 				5A5DED9D1D3F54AB00058525 /* MeSettingView.swift in Sources */,
 				5AB70B051D45FA6500551144 /* MeDetailViewController.swift in Sources */,
@@ -371,8 +384,11 @@
 				5AB70B011D45E42A00551144 /* WXUserDetailCell.swift in Sources */,
 				5AC7E0091D40A24300B77BA1 /* WXSettingBaseViewController.swift in Sources */,
 				5A21504A1D2F9FA200E17B8B /* NewFetureViewController.swift in Sources */,
+				5A3F35381D475C4B00BEC9B3 /* WXFriendHeaderView.swift in Sources */,
+				5A3F352D1D47387700BEC9B3 /* FriendSearchViewController.swift in Sources */,
 				5AB70B031D45E70E00551144 /* WXUser.swift in Sources */,
 				5A2150481D2F9CE000E17B8B /* FourViewController.swift in Sources */,
+				5A3F352F1D473FB600BEC9B3 /* WXFriendCell.swift in Sources */,
 				5AB70AFF1D45E37D00551144 /* MeMainViewController.swift in Sources */,
 				5AC7DFF11D407AC100B77BA1 /* CommonViewController.swift in Sources */,
 				5A21503A1D2F83AB00E17B8B /* MainViewController.swift in Sources */,
