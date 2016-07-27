@@ -17,14 +17,14 @@ Pod::Spec.new do |s|
 
   s.name         = "swiftTaste"
   s.version      = "0.0.1"
-  s.summary      = "A short description of swiftTaste."
+  s.summary      = "swiftTaste is test"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
   #   * Try to keep it short, snappy and to the point.
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
-  s.description  = <<-DESC
+  s.description  = <<-DESC SwiftTaste
                    DESC
 
   s.homepage     = "https://github.com/liuqiang187/SwiftTaste"
