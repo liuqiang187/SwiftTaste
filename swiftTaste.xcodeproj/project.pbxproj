@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5A0A4F461D3E240B00A61418 /* temp.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0A4F451D3E240B00A61418 /* temp.m */; };
 		5A2150271D2F7D8100E17B8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A2150251D2F7D8100E17B8B /* Main.storyboard */; };
 		5A2150291D2F7D8100E17B8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A2150281D2F7D8100E17B8B /* Assets.xcassets */; };
 		5A21502C1D2F7D8100E17B8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A21502A1D2F7D8100E17B8B /* LaunchScreen.storyboard */; };
@@ -47,8 +46,6 @@
 		138BBA0D7F3DA4E8C5101542 /* Pods-swiftTaste.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftTaste.release.xcconfig"; path = "Pods/Target Support Files/Pods-swiftTaste/Pods-swiftTaste.release.xcconfig"; sourceTree = "<group>"; };
 		498F69A9A994F821C26F8FD4 /* Pods-swiftTaste.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftTaste.debug.xcconfig"; path = "Pods/Target Support Files/Pods-swiftTaste/Pods-swiftTaste.debug.xcconfig"; sourceTree = "<group>"; };
 		5A0A4F431D3E240A00A61418 /* swiftTaste-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "swiftTaste-Bridging-Header.h"; sourceTree = "<group>"; };
-		5A0A4F441D3E240B00A61418 /* temp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = temp.h; sourceTree = "<group>"; };
-		5A0A4F451D3E240B00A61418 /* temp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = temp.m; sourceTree = "<group>"; };
 		5A21501E1D2F7D8100E17B8B /* swiftTaste.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swiftTaste.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A2150261D2F7D8100E17B8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5A2150281D2F7D8100E17B8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -174,8 +171,6 @@
 			children = (
 				5A2150371D2F83AB00E17B8B /* AppDelegate.swift */,
 				5A2150381D2F83AB00E17B8B /* Info.plist */,
-				5A0A4F441D3E240B00A61418 /* temp.h */,
-				5A0A4F451D3E240B00A61418 /* temp.m */,
 				5A0A4F431D3E240A00A61418 /* swiftTaste-Bridging-Header.h */,
 			);
 			path = Resource;
@@ -392,7 +387,6 @@
 				5AB70AFF1D45E37D00551144 /* MeMainViewController.swift in Sources */,
 				5AC7DFF11D407AC100B77BA1 /* CommonViewController.swift in Sources */,
 				5A21503A1D2F83AB00E17B8B /* MainViewController.swift in Sources */,
-				5A0A4F461D3E240B00A61418 /* temp.m in Sources */,
 				5AB70B071D460D9600551144 /* DiscoverViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
