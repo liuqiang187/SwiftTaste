@@ -140,6 +140,10 @@ class FriendsViewController: CommonTableViewController ,UISearchBarDelegate{
         return true
     }
     
+    func searchBarTextDidEndEditing(searchBar: UISearchBar) {
+        tabBarController?.tabBar.hidden = false
+    }
+    
     func searchBarCancelButtonClicked(searchBar: UISearchBar) {
         tabBarController?.tabBar.hidden = false
     }
