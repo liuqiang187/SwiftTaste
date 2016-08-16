@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '8946F3FD6704F12C94136FFEA9566838'
-               BlueprintName = 'Pods-swiftTaste'
+               BlueprintIdentifier = 'D58CAD74411F3EA5D73A48FFB3DC29A5'
+               BlueprintName = 'Result'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'Pods-swiftTaste.framework'>
+               BuildableName = 'Result.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

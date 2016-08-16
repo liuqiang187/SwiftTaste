@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '8946F3FD6704F12C94136FFEA9566838'
-               BlueprintName = 'Pods-swiftTaste'
+               BlueprintIdentifier = '78C33D52F7E2D591E77871DBB03E8468'
+               BlueprintName = 'Moya'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'Pods-swiftTaste.framework'>
+               BuildableName = 'Moya.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
