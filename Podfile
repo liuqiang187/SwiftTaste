@@ -8,6 +8,7 @@ pod 'Alamofire' ## 网络请求, swift版的AFN
 pod 'Kingfisher' ## 轻量级的SDWebImage
 pod 'FDFullscreenPopGesture'
 pod 'LTNavigationBar'
+pod 'Moya'
 
 end
 

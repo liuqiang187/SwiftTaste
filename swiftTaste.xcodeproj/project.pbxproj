@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5A0A4F461D3E240B00A61418 /* temp.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0A4F451D3E240B00A61418 /* temp.m */; };
 		5A2150271D2F7D8100E17B8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A2150251D2F7D8100E17B8B /* Main.storyboard */; };
 		5A2150291D2F7D8100E17B8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A2150281D2F7D8100E17B8B /* Assets.xcassets */; };
 		5A21502C1D2F7D8100E17B8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A21502A1D2F7D8100E17B8B /* LaunchScreen.storyboard */; };
@@ -21,11 +20,17 @@
 		5A2150481D2F9CE000E17B8B /* FourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2150471D2F9CE000E17B8B /* FourViewController.swift */; };
 		5A21504A1D2F9FA200E17B8B /* NewFetureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2150491D2F9FA200E17B8B /* NewFetureViewController.swift */; };
 		5A21504E1D2FA9F600E17B8B /* config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A21504D1D2FA9F600E17B8B /* config.swift */; };
+		5A3F352B1D47362500BEC9B3 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3F352A1D47362500BEC9B3 /* FriendsViewController.swift */; };
+		5A3F352D1D47387700BEC9B3 /* FriendSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3F352C1D47387700BEC9B3 /* FriendSearchViewController.swift */; };
+		5A3F352F1D473FB600BEC9B3 /* WXFriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3F352E1D473FB600BEC9B3 /* WXFriendCell.swift */; };
+		5A3F35381D475C4B00BEC9B3 /* WXFriendHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3F35371D475C4B00BEC9B3 /* WXFriendHeaderView.swift */; };
 		5A5DED9D1D3F54AB00058525 /* MeSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5DED9C1D3F54AB00058525 /* MeSettingView.swift */; };
 		5AB70AFF1D45E37D00551144 /* MeMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB70AFE1D45E37D00551144 /* MeMainViewController.swift */; };
 		5AB70B011D45E42A00551144 /* WXUserDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB70B001D45E42A00551144 /* WXUserDetailCell.swift */; };
 		5AB70B031D45E70E00551144 /* WXUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB70B021D45E70E00551144 /* WXUser.swift */; };
 		5AB70B051D45FA6500551144 /* MeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB70B041D45FA6500551144 /* MeDetailViewController.swift */; };
+		5AB70B071D460D9600551144 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB70B061D460D9600551144 /* DiscoverViewController.swift */; };
+		5AB70B091D46132400551144 /* WXConfigData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB70B081D46132400551144 /* WXConfigData.swift */; };
 		5AC7DFEA1D40799B00B77BA1 /* UIView+TL.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC7DFE91D40799B00B77BA1 /* UIView+TL.m */; };
 		5AC7DFED1D407A8300B77BA1 /* CommonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC7DFEC1D407A8300B77BA1 /* CommonTableViewCell.swift */; };
 		5AC7DFEF1D407AAC00B77BA1 /* CommonTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC7DFEE1D407AAC00B77BA1 /* CommonTableViewController.swift */; };
@@ -34,6 +39,9 @@
 		5AC7E00B1D40A36500B77BA1 /* WXSettingHeaderFooteFView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC7E00A1D40A36500B77BA1 /* WXSettingHeaderFooteFView.swift */; };
 		5AC7E00D1D40A37D00B77BA1 /* WXSettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC7E00C1D40A37D00B77BA1 /* WXSettingCell.swift */; };
 		5AC7E00F1D40A59B00B77BA1 /* WXSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC7E00E1D40A59B00B77BA1 /* WXSetting.swift */; };
+		5AE183C91D51F80C00D3BB57 /* SURefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE183C41D51F80C00D3BB57 /* SURefreshHeader.m */; };
+		5AE183CA1D51F80C00D3BB57 /* UIScrollView+SURefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE183C61D51F80C00D3BB57 /* UIScrollView+SURefresh.m */; };
+		5AE183CB1D51F80C00D3BB57 /* UIView+SURefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE183C81D51F80C00D3BB57 /* UIView+SURefresh.m */; };
 		B2D9A413A7A1A59D29A95AAF /* Pods_swiftTaste.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFA8E95FD23B752C6C1A91EB /* Pods_swiftTaste.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,8 +49,6 @@
 		138BBA0D7F3DA4E8C5101542 /* Pods-swiftTaste.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftTaste.release.xcconfig"; path = "Pods/Target Support Files/Pods-swiftTaste/Pods-swiftTaste.release.xcconfig"; sourceTree = "<group>"; };
 		498F69A9A994F821C26F8FD4 /* Pods-swiftTaste.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftTaste.debug.xcconfig"; path = "Pods/Target Support Files/Pods-swiftTaste/Pods-swiftTaste.debug.xcconfig"; sourceTree = "<group>"; };
 		5A0A4F431D3E240A00A61418 /* swiftTaste-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "swiftTaste-Bridging-Header.h"; sourceTree = "<group>"; };
-		5A0A4F441D3E240B00A61418 /* temp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = temp.h; sourceTree = "<group>"; };
-		5A0A4F451D3E240B00A61418 /* temp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = temp.m; sourceTree = "<group>"; };
 		5A21501E1D2F7D8100E17B8B /* swiftTaste.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swiftTaste.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A2150261D2F7D8100E17B8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5A2150281D2F7D8100E17B8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -58,11 +64,17 @@
 		5A2150471D2F9CE000E17B8B /* FourViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourViewController.swift; sourceTree = "<group>"; };
 		5A2150491D2F9FA200E17B8B /* NewFetureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewFetureViewController.swift; sourceTree = "<group>"; };
 		5A21504D1D2FA9F600E17B8B /* config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = config.swift; sourceTree = "<group>"; };
+		5A3F352A1D47362500BEC9B3 /* FriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
+		5A3F352C1D47387700BEC9B3 /* FriendSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendSearchViewController.swift; sourceTree = "<group>"; };
+		5A3F352E1D473FB600BEC9B3 /* WXFriendCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WXFriendCell.swift; path = Setting/WXFriendCell.swift; sourceTree = "<group>"; };
+		5A3F35371D475C4B00BEC9B3 /* WXFriendHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WXFriendHeaderView.swift; path = Setting/WXFriendHeaderView.swift; sourceTree = "<group>"; };
 		5A5DED9C1D3F54AB00058525 /* MeSettingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeSettingView.swift; sourceTree = "<group>"; };
 		5AB70AFE1D45E37D00551144 /* MeMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeMainViewController.swift; sourceTree = "<group>"; };
 		5AB70B001D45E42A00551144 /* WXUserDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WXUserDetailCell.swift; path = Setting/WXUserDetailCell.swift; sourceTree = "<group>"; };
 		5AB70B021D45E70E00551144 /* WXUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WXUser.swift; path = Setting/WXUser.swift; sourceTree = "<group>"; };
 		5AB70B041D45FA6500551144 /* MeDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeDetailViewController.swift; sourceTree = "<group>"; };
+		5AB70B061D460D9600551144 /* DiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
+		5AB70B081D46132400551144 /* WXConfigData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WXConfigData.swift; sourceTree = "<group>"; };
 		5AC7DFE81D40799B00B77BA1 /* UIView+TL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TL.h"; sourceTree = "<group>"; };
 		5AC7DFE91D40799B00B77BA1 /* UIView+TL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TL.m"; sourceTree = "<group>"; };
 		5AC7DFEC1D407A8300B77BA1 /* CommonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonTableViewCell.swift; sourceTree = "<group>"; };
@@ -72,6 +84,12 @@
 		5AC7E00A1D40A36500B77BA1 /* WXSettingHeaderFooteFView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WXSettingHeaderFooteFView.swift; path = Setting/WXSettingHeaderFooteFView.swift; sourceTree = "<group>"; };
 		5AC7E00C1D40A37D00B77BA1 /* WXSettingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WXSettingCell.swift; path = Setting/WXSettingCell.swift; sourceTree = "<group>"; };
 		5AC7E00E1D40A59B00B77BA1 /* WXSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WXSetting.swift; path = Setting/WXSetting.swift; sourceTree = "<group>"; };
+		5AE183C31D51F80C00D3BB57 /* SURefreshHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SURefreshHeader.h; sourceTree = "<group>"; };
+		5AE183C41D51F80C00D3BB57 /* SURefreshHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SURefreshHeader.m; sourceTree = "<group>"; };
+		5AE183C51D51F80C00D3BB57 /* UIScrollView+SURefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+SURefresh.h"; sourceTree = "<group>"; };
+		5AE183C61D51F80C00D3BB57 /* UIScrollView+SURefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+SURefresh.m"; sourceTree = "<group>"; };
+		5AE183C71D51F80C00D3BB57 /* UIView+SURefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SURefresh.h"; sourceTree = "<group>"; };
+		5AE183C81D51F80C00D3BB57 /* UIView+SURefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SURefresh.m"; sourceTree = "<group>"; };
 		DFA8E95FD23B752C6C1A91EB /* Pods_swiftTaste.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swiftTaste.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -143,6 +161,9 @@
 				5A5DED9C1D3F54AB00058525 /* MeSettingView.swift */,
 				5AB70AFE1D45E37D00551144 /* MeMainViewController.swift */,
 				5AB70B041D45FA6500551144 /* MeDetailViewController.swift */,
+				5AB70B061D460D9600551144 /* DiscoverViewController.swift */,
+				5A3F352A1D47362500BEC9B3 /* FriendsViewController.swift */,
+				5A3F352C1D47387700BEC9B3 /* FriendSearchViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -159,8 +180,6 @@
 			children = (
 				5A2150371D2F83AB00E17B8B /* AppDelegate.swift */,
 				5A2150381D2F83AB00E17B8B /* Info.plist */,
-				5A0A4F441D3E240B00A61418 /* temp.h */,
-				5A0A4F451D3E240B00A61418 /* temp.m */,
 				5A0A4F431D3E240A00A61418 /* swiftTaste-Bridging-Header.h */,
 			);
 			path = Resource;
@@ -179,6 +198,7 @@
 			children = (
 				5AC7DFE71D40797F00B77BA1 /* OC */,
 				5A21504D1D2FA9F600E17B8B /* config.swift */,
+				5AB70B081D46132400551144 /* WXConfigData.swift */,
 			);
 			path = other;
 			sourceTree = "<group>";
@@ -186,6 +206,7 @@
 		5AC7DFE71D40797F00B77BA1 /* OC */ = {
 			isa = PBXGroup;
 			children = (
+				5AE183C21D51F80C00D3BB57 /* SURefresh */,
 				5AC7DFE81D40799B00B77BA1 /* UIView+TL.h */,
 				5AC7DFE91D40799B00B77BA1 /* UIView+TL.m */,
 			);
@@ -211,8 +232,23 @@
 				5AC7E00E1D40A59B00B77BA1 /* WXSetting.swift */,
 				5AB70B001D45E42A00551144 /* WXUserDetailCell.swift */,
 				5AB70B021D45E70E00551144 /* WXUser.swift */,
+				5A3F352E1D473FB600BEC9B3 /* WXFriendCell.swift */,
+				5A3F35371D475C4B00BEC9B3 /* WXFriendHeaderView.swift */,
 			);
 			name = settting;
+			sourceTree = "<group>";
+		};
+		5AE183C21D51F80C00D3BB57 /* SURefresh */ = {
+			isa = PBXGroup;
+			children = (
+				5AE183C31D51F80C00D3BB57 /* SURefreshHeader.h */,
+				5AE183C41D51F80C00D3BB57 /* SURefreshHeader.m */,
+				5AE183C51D51F80C00D3BB57 /* UIScrollView+SURefresh.h */,
+				5AE183C61D51F80C00D3BB57 /* UIScrollView+SURefresh.m */,
+				5AE183C71D51F80C00D3BB57 /* UIView+SURefresh.h */,
+				5AE183C81D51F80C00D3BB57 /* UIView+SURefresh.m */,
+			);
+			path = SURefresh;
 			sourceTree = "<group>";
 		};
 		8984DD90934279430337F781 /* Pods */ = {
@@ -350,11 +386,16 @@
 				5A2150421D2F9CC100E17B8B /* FirstViewController.swift in Sources */,
 				5AC7E00B1D40A36500B77BA1 /* WXSettingHeaderFooteFView.swift in Sources */,
 				5AC7DFED1D407A8300B77BA1 /* CommonTableViewCell.swift in Sources */,
+				5AE183C91D51F80C00D3BB57 /* SURefreshHeader.m in Sources */,
+				5AB70B091D46132400551144 /* WXConfigData.swift in Sources */,
 				5A2150401D2F905B00E17B8B /* NavigationViewController.swift in Sources */,
 				5AC7E00D1D40A37D00B77BA1 /* WXSettingCell.swift in Sources */,
+				5AE183CB1D51F80C00D3BB57 /* UIView+SURefresh.m in Sources */,
 				5AC7DFEF1D407AAC00B77BA1 /* CommonTableViewController.swift in Sources */,
 				5A21504E1D2FA9F600E17B8B /* config.swift in Sources */,
 				5AC7DFEA1D40799B00B77BA1 /* UIView+TL.m in Sources */,
+				5AE183CA1D51F80C00D3BB57 /* UIScrollView+SURefresh.m in Sources */,
+				5A3F352B1D47362500BEC9B3 /* FriendsViewController.swift in Sources */,
 				5A2150461D2F9CD500E17B8B /* ThirdViewController.swift in Sources */,
 				5A5DED9D1D3F54AB00058525 /* MeSettingView.swift in Sources */,
 				5AB70B051D45FA6500551144 /* MeDetailViewController.swift in Sources */,
@@ -364,12 +405,15 @@
 				5AB70B011D45E42A00551144 /* WXUserDetailCell.swift in Sources */,
 				5AC7E0091D40A24300B77BA1 /* WXSettingBaseViewController.swift in Sources */,
 				5A21504A1D2F9FA200E17B8B /* NewFetureViewController.swift in Sources */,
+				5A3F35381D475C4B00BEC9B3 /* WXFriendHeaderView.swift in Sources */,
+				5A3F352D1D47387700BEC9B3 /* FriendSearchViewController.swift in Sources */,
 				5AB70B031D45E70E00551144 /* WXUser.swift in Sources */,
 				5A2150481D2F9CE000E17B8B /* FourViewController.swift in Sources */,
+				5A3F352F1D473FB600BEC9B3 /* WXFriendCell.swift in Sources */,
 				5AB70AFF1D45E37D00551144 /* MeMainViewController.swift in Sources */,
 				5AC7DFF11D407AC100B77BA1 /* CommonViewController.swift in Sources */,
 				5A21503A1D2F83AB00E17B8B /* MainViewController.swift in Sources */,
-				5A0A4F461D3E240B00A61418 /* temp.m in Sources */,
+				5AB70B071D460D9600551144 /* DiscoverViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

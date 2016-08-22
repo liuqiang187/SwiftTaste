@@ -22,7 +22,7 @@ class MeMainViewController: WXSettingBaseViewController {
         
         tableView.registerClass(WXUserDetailCell.self, forCellReuseIdentifier: CellReuseIdentifier)
         
-        data = getSettingVCItems()
+        data = WXConfigData.getMeMainVCItems()
     }
     
     // MARK: - UITableViewDataSource
@@ -83,28 +83,5 @@ class MeMainViewController: WXSettingBaseViewController {
         }
     }
     
-    func getSettingVCItems() -> [WXSettingGrounp] {
-        var items = [WXSettingGrounp]()
-
-        let album = WXSettingItem.createWithImageName("MoreMyAlbum_25x25_", title: "相册")
-        let favorite = WXSettingItem.createWithImageName("MoreMyFavorites_25x25_", title: "收藏")
-        let bank = WXSettingItem.createWithImageName("MoreMyBankCard_25x25_", title: "钱包")
-        let card = WXSettingItem.createWithImageName("MyCardPackageIcon_25x25_", title: "卡包")
-        let group1 = WXSettingGrounp()
-        group1.items = [album,favorite,bank,card]
-        items.append(group1)
-        
-        let expression = WXSettingItem.createWithImageName("MoreGame_25x25_", title: "表情")
-        let group2 = WXSettingGrounp()
-        group2.items = [expression]
-        items.append(group2)
-        
-        let setting = WXSettingItem.createWithImageName("MoreSetting_25x25_", title: "设置")
-        let group3 = WXSettingGrounp()
-        group3.items = [setting]
-        items.append(group3)
-        
-        return items
-    }
     
 }

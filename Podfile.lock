@@ -3,6 +3,12 @@ PODS:
   - FDFullscreenPopGesture (1.1)
   - Kingfisher (2.1.0)
   - LTNavigationBar (2.1.2)
+  - Moya (7.0.0):
+    - Moya/Core (= 7.0.0)
+  - Moya/Core (7.0.0):
+    - Alamofire (~> 3.0)
+    - Result (~> 2.0)
+  - Result (2.1.3)
   - SnapKit (0.19.1)
 
 DEPENDENCIES:
@@ -10,6 +16,7 @@ DEPENDENCIES:
   - FDFullscreenPopGesture
   - Kingfisher
   - LTNavigationBar
+  - Moya
   - SnapKit
 
 SPEC CHECKSUMS:
@@ -17,8 +24,10 @@ SPEC CHECKSUMS:
   FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
   Kingfisher: 3ac09acad75a25ab22f6d7cef3de10d61dd4792d
   LTNavigationBar: bfc5fc06a83463009b9d99675f2a32dcbb631b00
+  Moya: f004b82418fb8165ee1fc9f86190db4b3611fda9
+  Result: 18e1a7597fbcca5923c565b40a25a98afafdee02
   SnapKit: eff58d6e3451bf2f482db2eccf86aecf371dc62d
 
-PODFILE CHECKSUM: 491ad20847df77cdfcab5c056489fb905789a5f8
+PODFILE CHECKSUM: e6bbe36eb5be02b56e80f651371d496438f87367
 
 COCOAPODS: 1.0.1
