@@ -19,22 +19,22 @@ class NewFetureViewController: UITableViewController {
         
         navigationItem.title = "新特性"
         
-        view.backgroundColor = UIColor.lightGrayColor()
+        view.backgroundColor = UIColor.lightGray
         
-        tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: CellReuseIdentifier)
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: CellReuseIdentifier)
     }
     
     // MARK: - Table view data source
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 20
     }
     
-    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 64
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(CellReuseIdentifier)
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: CellReuseIdentifier)
         
         let index = NSString(format: "%zd",indexPath.row)
         
@@ -44,20 +44,20 @@ class NewFetureViewController: UITableViewController {
         return cell!
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         
         let index = NSString(format: "%zd",indexPath.row)
         
-        clickBlock?(type: index as String)
+        clickBlock?(index as String)
         
-        navigationController?.popViewControllerAnimated(true)
+        _ = navigationController?.popViewController(animated: true)
     }
 
     //点击block
-    var clickBlock : ((type : String) -> ())?
+    var clickBlock : ((_ type : String) -> ())?
     
-    override func scrollViewDidScroll(scrollView: UIScrollView) {
+    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let offsetY = scrollView.contentOffset.y;
         if (offsetY > 0) {
             if (offsetY >= 44) {
@@ -71,13 +71,13 @@ class NewFetureViewController: UITableViewController {
         }
     }
     
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.navigationBar.lt_reset()
         navigationController?.navigationBar.lt_setTranslationY(0)
     }
     
-    private func setNavigationBarTransformProgress(progress: CGFloat) {
+    fileprivate func setNavigationBarTransformProgress(_ progress: CGFloat) {
         navigationController?.navigationBar.lt_setTranslationY(-44 * progress)
         navigationController?.navigationBar.lt_setElementsAlpha(1-progress)
     }

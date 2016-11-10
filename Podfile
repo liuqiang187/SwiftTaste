@@ -1,11 +1,11 @@
 use_frameworks!
-platform :ios, "8.0"
+platform :ios, "9.0"
 
 target 'swiftTaste' do
 
-pod 'SnapKit' ## 自动布局
-#pod 'Alamofire' ## 网络请求, swift版的AFN
-#pod 'Kingfisher' ## 轻量级的SDWebImage
+pod 'SnapKit', '~> 3.0.2'
+pod 'Alamofire', :git => 'https://github.com/Alamofire/Alamofire.git', :tag => '4.0.1'
+pod 'Kingfisher', '~> 3.1.4'
 pod 'FDFullscreenPopGesture'
 pod 'LTNavigationBar'
 #pod 'Moya'

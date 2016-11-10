@@ -8,11 +8,11 @@
 
 import UIKit
 
-public func RGB(R: CGFloat, _ G: CGFloat, _ B: CGFloat) -> UIColor {
+public func RGB(_ R: CGFloat, _ G: CGFloat, _ B: CGFloat) -> UIColor {
     return UIColor.init(red: R/255.0, green: G/255.0, blue: B/255.0, alpha: 1)
 }
 
-public func RGBA(R: CGFloat, _ G: CGFloat, _ B: CGFloat, A: CGFloat) -> UIColor {
+public func RGBA(_ R: CGFloat, _ G: CGFloat, _ B: CGFloat, A: CGFloat) -> UIColor {
     return UIColor.init(red: R/255.0, green: G/255.0, blue: B/255.0, alpha: A)
 }
 
@@ -29,9 +29,9 @@ public func DEFAULT_BACKGROUND_COLOR() -> UIColor {
 }
 
 public func kScreenWidth() -> CGFloat {
-    return UIScreen.mainScreen().bounds.size.width
+    return UIScreen.main.bounds.size.width
 }
 
 public func kScreenHeight() -> CGFloat {
-    return UIScreen.mainScreen().bounds.size.height
+    return UIScreen.main.bounds.size.height
 }

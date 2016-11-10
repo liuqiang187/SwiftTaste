@@ -19,30 +19,30 @@ class FirstViewController: UIViewController {
         
         navigationItem.title = "聊天"
         
-        view.backgroundColor = UIColor.whiteColor()
+        view.backgroundColor = UIColor.white
         
-        NSThread.sleepForTimeInterval(2.0)//延长2秒
+        Thread.sleep(forTimeInterval: 2.0)//延长2秒
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(FirstViewController.changeOffset), name: TextField_Change, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(FirstViewController.changeOffset), name: NSNotification.Name(rawValue: TextField_Change), object: nil)
         
         setup()
     }
     
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return UIStatusBarStyle.LightContent
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.navigationBar.lt_setBackgroundColor(NavBarColor())
     }
     
-    private func setup()
+    fileprivate func setup()
     {
         view.addSubview(inputBtn)
-        inputBtn.snp_makeConstraints { (make) in
-            make.centerX.equalTo(view.snp_centerX)
-            make.centerY.equalTo(view.snp_centerY)
+        inputBtn.snp.makeConstraints { (make) in
+            make.centerX.equalTo(view.snp.centerX)
+            make.centerY.equalTo(view.snp.centerY)
             make.height.equalTo(100)
             make.width.equalTo(100)
         }
@@ -55,28 +55,28 @@ class FirstViewController: UIViewController {
         navigationController?.pushViewController(vc, animated: true)
         
         vc.clickBlock = { type in
-            self.inputBtn.setTitle("点击" + type, forState: .Normal)
+            self.inputBtn.setTitle("点击" + type, for: UIControlState())
         }
     }
     
-    private lazy var inputBtn : UIButton = {
+    fileprivate lazy var inputBtn : UIButton = {
         let btn = UIButton()
-        btn.setTitle("点击", forState: .Normal)
+        btn.setTitle("点击", for: UIControlState())
         btn.backgroundColor = MainColor()
-        btn.setTitleColor(UIColor.blackColor(), forState: .Normal)
-        btn.addTarget(self, action: #selector(FirstViewController.btnClick), forControlEvents: .TouchUpInside)
+        btn.setTitleColor(UIColor.black, for: UIControlState())
+        btn.addTarget(self, action: #selector(FirstViewController.btnClick), for: .touchUpInside)
         return btn
     }()
     
-    private lazy var commentView : CommentView = {
+    fileprivate lazy var commentView : CommentView = {
         let view = CommentView()
         return view
     }()
     
-    @objc private func changeOffset()
+    @objc fileprivate func changeOffset()
     {
-        commentView.snp_updateConstraints { (make) in
-            make.bottom.equalTo(inputBtn.snp_top).offset(-10)
+        commentView.snp.updateConstraints { (make) in
+            make.bottom.equalTo(inputBtn.snp.top).offset(-10)
         }
     }
 }

@@ -24,12 +24,12 @@ class WXUser: NSObject {
 //        setValuesForKeysWithDictionary(dict)
 //    }
     
-    override func setValue(value: AnyObject?, forKey key: String) {
+    override func setValue(_ value: Any?, forKey key: String) {
         
         super.setValue(value, forKey: key)
     }
     
-    override func setValue(value: AnyObject?, forUndefinedKey key: String) {
+    override func setValue(_ value: Any?, forUndefinedKey key: String) {
         
     }
 }

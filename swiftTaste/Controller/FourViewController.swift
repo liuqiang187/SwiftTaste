@@ -13,8 +13,8 @@ private let CellReuseIdentifier = "FCellReuseIdentifier"
 class FourViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     
-    private let MAXTOPBEGINE : CGFloat = 64
-    private var originalHeaderImageViewFrame : CGRect = CGRectZero
+    fileprivate let MAXTOPBEGINE : CGFloat = 64
+    fileprivate var originalHeaderImageViewFrame : CGRect = CGRect.zero
     
     // MARK: - VClife
     override func viewDidLoad() {
@@ -24,51 +24,51 @@ class FourViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         navigationItem.title = "我"
         
-        view.backgroundColor = UIColor.whiteColor()
+        view.backgroundColor = UIColor.white
                 
-        navigationController?.navigationBar.lt_setBackgroundColor(UIColor.clearColor())
+        navigationController?.navigationBar.lt_setBackgroundColor(UIColor.clear)
         
-        tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: CellReuseIdentifier)
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: CellReuseIdentifier)
         
         setup()
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.navigationBar.shadowImage = UIImage.init();
         scrollViewDidScroll(tableView)
     }
     
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.navigationBar.lt_reset()
     }
     
-    private func setup()
+    fileprivate func setup()
     {
         view.addSubview(tableView)
-        tableView.snp_makeConstraints { (make) in
+        tableView.snp.makeConstraints { (make) in
             make.edges.equalTo(view)
         }
         
-        tableView.insertSubview(backImg, atIndex: 0)
+        tableView.insertSubview(backImg, at: 0)
         originalHeaderImageViewFrame = backImg.frame
     }
     
     // MARK: - scroolView
-    func scrollViewDidScroll(scrollView: UIScrollView) {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let color = NavBarColor()
         let offsetY = scrollView.contentOffset.y;
         if (offsetY > MAXTOPBEGINE) {
             let alpha = min(1, 1 - ((MAXTOPBEGINE + 64 - offsetY) / 64))
-            navigationController?.navigationBar.lt_setBackgroundColor(color.colorWithAlphaComponent(alpha))
+            navigationController?.navigationBar.lt_setBackgroundColor(color.withAlphaComponent(alpha))
         } else {
-            navigationController?.navigationBar.lt_setBackgroundColor(color.colorWithAlphaComponent(0))
+            navigationController?.navigationBar.lt_setBackgroundColor(color.withAlphaComponent(0))
         }
         updateHeaderImageViewFrameWithOffsetY(offsetY)
     }
     
-    func updateHeaderImageViewFrameWithOffsetY(offsetY: CGFloat)
+    func updateHeaderImageViewFrameWithOffsetY(_ offsetY: CGFloat)
     {
         if (offsetY > 0) {
             backImg.frame = self.originalHeaderImageViewFrame
@@ -81,20 +81,20 @@ class FourViewController: UIViewController, UITableViewDelegate, UITableViewData
         let y :CGFloat = self.originalHeaderImageViewFrame.origin.y + offsetY
         let width :CGFloat = self.originalHeaderImageViewFrame.size.width
         let height :CGFloat = self.originalHeaderImageViewFrame.size.height - offsetY
-        backImg.frame = CGRectMake(x, y, width, height)
+        backImg.frame = CGRect(x: x, y: y, width: width, height: height)
     }
     
     // MARK: - Table view data source
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 20
     }
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 64
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(CellReuseIdentifier)
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: CellReuseIdentifier)
         
         let index = NSString(format: "%zd",indexPath.row)
         
@@ -104,21 +104,21 @@ class FourViewController: UIViewController, UITableViewDelegate, UITableViewData
         return cell!
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         
     }
     
     // MARK: lazy
-    private lazy var backImg : UIImageView = {
+    fileprivate lazy var backImg : UIImageView = {
         let img = UIImageView()
         img.image = UIImage.init(named: "SkyBg01")
-        img.contentMode = UIViewContentMode.ScaleAspectFill
-        img.frame = CGRectMake(0, 0, kScreenWidth(), 200)
+        img.contentMode = UIViewContentMode.scaleAspectFill
+        img.frame = CGRect(x: 0, y: 0, width: kScreenWidth(), height: 200)
         return img
     }()
     
-    private lazy var tableView : UITableView = {
+    fileprivate lazy var tableView : UITableView = {
         let tableView = UITableView()
         tableView.delegate = self
         tableView.dataSource = self
