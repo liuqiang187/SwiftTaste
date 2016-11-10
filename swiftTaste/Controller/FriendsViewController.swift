@@ -65,6 +65,9 @@ class FriendsViewController: CommonTableViewController ,UISearchBarDelegate{
         if section == 0 {
             return nil
         }
+        if sections.isEmpty {
+            return nil
+        }
         let view = tableView.dequeueReusableHeaderFooterView(withIdentifier: "WXFriendHeaderView") as? WXFriendHeaderView
         view!.title = sections[section-1]
         return view
@@ -127,6 +130,11 @@ class FriendsViewController: CommonTableViewController ,UISearchBarDelegate{
             return 0
         }
         return 22
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
     }
     
     // MARK: - UISearchBarDelegate

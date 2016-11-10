@@ -34,8 +34,8 @@ class WXUserDetailCell: CommonTableViewCell {
     var user : WXUser?
     {
         didSet{
-            avatarImageView.kf.setImage(with: URL.init(string: (user?.avatarURL)!)!,
-                                        placeholder: nil,
+            avatarImageView.kf.setImage(with: URL.init(string: (user?.avatarURL)!),
+                                        placeholder: UIImage.init(named: "dice_Action_0"),
                                         options: [.transition(.fade(1))],
                                         progressBlock: nil,
                                         completionHandler: nil)

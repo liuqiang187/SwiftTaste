@@ -39,22 +39,22 @@ class WXConfigData: NSObject {
     class func initFriendsTestData() -> ([WXUser]) {
         var items = [WXUser]()
         let user1 = WXUser()
-        user1.username = "吕轻侯"
-        user1.nikename = "侯哥"
+        user1.username = "张三"
+        user1.nikename = "三哥"
         user1.userID = "yun"
         user1.avatarURL = "dice_Action_0"
         items.append(user1)
         
         let user2 = WXUser()
-        user2.username = "吕轻侯"
-        user2.nikename = "侯哥"
+        user2.username = "李四"
+        user2.nikename = "四哥"
         user2.userID = "yun"
         user2.avatarURL = "dice_Action_1"
         items.append(user2)
         
         let user3 = WXUser()
-        user3.username = "吕轻侯"
-        user3.nikename = "侯哥"
+        user3.username = "王五二"
+        user3.nikename = "五哥"
         user3.userID = "yun"
         user3.avatarURL = "dice_Action_2"
         items.append(user3)
