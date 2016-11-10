@@ -13,11 +13,7 @@ class WXFriendCell: CommonTableViewCell {
     var user : WXUser?
         {
         didSet{
-            avatarImageView.kf.setImage(with: URL.init(string: (user?.avatarURL)!)!,
-                                        placeholder: nil,
-                                        options: [.transition(.fade(1))],
-                                        progressBlock: nil,
-                                        completionHandler: nil)
+            avatarImageView.image = UIImage.init(named: (user?.avatarURL)!)
             usernameLabel.text = user?.username
         }
     }

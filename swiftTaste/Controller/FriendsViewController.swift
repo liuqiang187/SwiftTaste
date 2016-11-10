@@ -65,6 +65,9 @@ class FriendsViewController: CommonTableViewController ,UISearchBarDelegate{
         if section == 0 {
             return nil
         }
+        if sections.isEmpty {
+            return nil
+        }
         let view = tableView.dequeueReusableHeaderFooterView(withIdentifier: "WXFriendHeaderView") as? WXFriendHeaderView
         view!.title = sections[section-1]
         return view
