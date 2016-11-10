@@ -132,6 +132,11 @@ class FriendsViewController: CommonTableViewController ,UISearchBarDelegate{
         return 22
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+    }
+    
     // MARK: - UISearchBarDelegate
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         searchVC.friendsArray = friendsArray
