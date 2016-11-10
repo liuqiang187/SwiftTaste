@@ -21,27 +21,27 @@ class FriendsViewController: CommonTableViewController ,UISearchBarDelegate{
         self.hidesBottomBarWhenPushed = false
         navigationItem.title = "通讯录"
         tableView.showsVerticalScrollIndicator = false
-        tableView.backgroundColor = UIColor.whiteColor()
-        tableView.sectionIndexBackgroundColor = UIColor.clearColor()
+        tableView.backgroundColor = UIColor.white
+        tableView.sectionIndexBackgroundColor = UIColor.clear
         tableView.sectionIndexColor = NavBarColor()
-        tableView.registerClass(WXFriendCell.self, forCellReuseIdentifier: "FriendCell")
-        tableView.registerClass(WXFriendHeaderView.self, forHeaderFooterViewReuseIdentifier: "WXFriendHeaderView")
-        tableView.separatorStyle = .None
+        tableView.register(WXFriendCell.self, forCellReuseIdentifier: "FriendCell")
+        tableView.register(WXFriendHeaderView.self, forHeaderFooterViewReuseIdentifier: "WXFriendHeaderView")
+        tableView.separatorStyle = .none
         tableView.tableFooterView = footerLabel
         tableView.tableHeaderView = searchController.searchBar
         
         initFriendsTestData()
     }
     
-    private func initFriendsTestData() -> (){
-        dispatch_async(dispatch_get_global_queue(0, 0)) {
+    fileprivate func initFriendsTestData() -> (){
+        DispatchQueue.global(qos: .background).async {
             
             self.friendsArray = WXConfigData.initFriendsTestData()
             self.data = WXConfigData.getFriendListDataBy(self.friendsArray)
             self.sections = WXConfigData.getFriendListSectionBy(self.friendsArray)
             self.functionGroup = WXConfigData.getFriendsVCItems()
             
-            dispatch_async(dispatch_get_main_queue(), { 
+            DispatchQueue.main.async(execute: { 
                 self.tableView.reloadData()
                 self.footerLabel.text = String(self.friendsArray.count) + "位联系人"
             })
@@ -49,11 +49,11 @@ class FriendsViewController: CommonTableViewController ,UISearchBarDelegate{
     }
     
     // MARK: - UITableViewDelegate
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return data.count + 1
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
             return functionGroup.items.count
         }
@@ -61,56 +61,56 @@ class FriendsViewController: CommonTableViewController ,UISearchBarDelegate{
         return array.count
     }
     
-    override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         if section == 0 {
             return nil
         }
-        let view = tableView.dequeueReusableHeaderFooterViewWithIdentifier("WXFriendHeaderView") as? WXFriendHeaderView
-        view!.title = sections[section - 1]
+        let view = tableView.dequeueReusableHeaderFooterView(withIdentifier: "WXFriendHeaderView") as? WXFriendHeaderView
+        view!.title = sections[section-1]
         return view
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("FriendCell") as! WXFriendCell
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "FriendCell") as! WXFriendCell
         if (indexPath.section == 0) {
             let item = functionGroup.itemAtIndex(indexPath.row) 
             let user = WXUser()
             user.username = item.title
             user.avatarURL = item.imageName
             cell.user = user
-            cell.topLineStyle = CellLineStyle.CellLineStyleNone
+            cell.topLineStyle = CellLineStyle.cellLineStyleNone
             if (indexPath.row == functionGroup.items.count - 1) {
-                cell.bottomLineStyle = CellLineStyle.CellLineStyleNone
+                cell.bottomLineStyle = CellLineStyle.cellLineStyleNone
             }
             else{
-                cell.bottomLineStyle = CellLineStyle.CellLineStyleDefault
+                cell.bottomLineStyle = CellLineStyle.cellLineStyleDefault
             }
         }
         else{
             let array = data[indexPath.section - 1]
             let user = array[indexPath.row]
             cell.user = user as? WXUser
-            cell.topLineStyle = CellLineStyle.CellLineStyleNone
+            cell.topLineStyle = CellLineStyle.cellLineStyleNone
             if (indexPath.row == array.count - 1) {
                 if (indexPath.section == data.count) {
-                    cell.bottomLineStyle = CellLineStyle.CellLineStyleFill
+                    cell.bottomLineStyle = CellLineStyle.cellLineStyleFill
                 }
                 else{
-                    cell.bottomLineStyle = CellLineStyle.CellLineStyleNone
+                    cell.bottomLineStyle = CellLineStyle.cellLineStyleNone
                 }
             }
             else{
-                cell.bottomLineStyle = CellLineStyle.CellLineStyleDefault
+                cell.bottomLineStyle = CellLineStyle.cellLineStyleDefault
             }
         }
         return cell
     }
     
-    override func sectionIndexTitlesForTableView(tableView: UITableView) -> [String]? {
+    override func sectionIndexTitles(for tableView: UITableView) -> [String]? {
         return sections
     }
     
-    override func tableView(tableView: UITableView, sectionForSectionIndexTitle title: String, atIndex index: Int) -> Int {
+    override func tableView(_ tableView: UITableView, sectionForSectionIndexTitle title: String, at index: Int) -> Int {
         if (index == 0) {
             tableView.scrollRectToVisible(searchController.searchBar.frame, animated: false)
             return -1
@@ -118,11 +118,11 @@ class FriendsViewController: CommonTableViewController ,UISearchBarDelegate{
         return index
     }
     
-    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 54.5
     }
     
-    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         if section == 0 {
             return 0
         }
@@ -130,36 +130,36 @@ class FriendsViewController: CommonTableViewController ,UISearchBarDelegate{
     }
     
     // MARK: - UISearchBarDelegate
-    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         searchVC.friendsArray = friendsArray
-        tabBarController?.tabBar.hidden = true
+        tabBarController?.tabBar.isHidden = true
     }
     
-    func searchBarShouldBeginEditing(searchBar: UISearchBar) -> Bool {
-        tabBarController?.tabBar.hidden = true
+    func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
+        tabBarController?.tabBar.isHidden = true
         return true
     }
     
-    func searchBarTextDidEndEditing(searchBar: UISearchBar) {
-        tabBarController?.tabBar.hidden = false
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        tabBarController?.tabBar.isHidden = false
     }
     
-    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
-        tabBarController?.tabBar.hidden = false
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        tabBarController?.tabBar.isHidden = false
     }
     
     // MARK: - lazy var
-    private lazy var footerLabel : UILabel = {
-        let label = UILabel.init(frame: CGRectMake(0, 0, kScreenWidth(), 49))
-        label.backgroundColor = UIColor.whiteColor()
-        label.textColor = UIColor.grayColor()
-        label.textAlignment = NSTextAlignment.Center
+    fileprivate lazy var footerLabel : UILabel = {
+        let label = UILabel.init(frame: CGRect(x: 0, y: 0, width: kScreenWidth(), height: 49))
+        label.backgroundColor = UIColor.white
+        label.textColor = UIColor.gray
+        label.textAlignment = NSTextAlignment.center
         return label
     }()
     
-    private lazy var searchVC : FriendSearchViewController = FriendSearchViewController()
+    fileprivate lazy var searchVC : FriendSearchViewController = FriendSearchViewController()
     
-    private lazy var searchController : UISearchController = {
+    fileprivate lazy var searchController : UISearchController = {
         let search = UISearchController.init(searchResultsController: self.searchVC)
         search.searchResultsUpdater = self.searchVC
         search.searchBar.placeholder = "搜索"
@@ -167,7 +167,7 @@ class FriendsViewController: CommonTableViewController ,UISearchBarDelegate{
         search.searchBar.sizeToFit()
         search.searchBar.delegate = self
         search.searchBar.layer.borderWidth = 0.5
-        search.searchBar.layer.borderColor = RGB(220, 220, 200).CGColor
+        search.searchBar.layer.borderColor = RGB(220, 220, 200).cgColor
         return search
     }()
 }

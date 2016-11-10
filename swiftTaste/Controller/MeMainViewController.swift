@@ -20,53 +20,53 @@ class MeMainViewController: WXSettingBaseViewController {
         
         navigationItem.title = "我"
         
-        tableView.registerClass(WXUserDetailCell.self, forCellReuseIdentifier: CellReuseIdentifier)
+        tableView.register(WXUserDetailCell.self, forCellReuseIdentifier: CellReuseIdentifier)
         
         data = WXConfigData.getMeMainVCItems()
     }
     
     // MARK: - UITableViewDataSource
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return data.count + 1
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
             return 1
         }
-        let group :WXSettingGrounp = data[section - 1] as! WXSettingGrounp;
+        let group :WXSettingGrounp = data[section - 1] ;
         return group.items.count
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if (indexPath.section == 0) {
-            let cell = tableView.dequeueReusableCellWithIdentifier(CellReuseIdentifier) as! WXUserDetailCell
-            cell.backgroundColor = UIColor.whiteColor()
-            cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
+            let cell = tableView.dequeueReusableCell(withIdentifier: CellReuseIdentifier) as! WXUserDetailCell
+            cell.backgroundColor = UIColor.white
+            cell.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
             cell.user = WXUser()
-            cell.topLineStyle = CellLineStyle.CellLineStyleFill
-            cell.bottomLineStyle = CellLineStyle.CellLineStyleFill
+            cell.topLineStyle = CellLineStyle.cellLineStyleFill
+            cell.bottomLineStyle = CellLineStyle.cellLineStyleFill
             return cell
         }
-        return super.tableView(tableView, cellForRowAtIndexPath: NSIndexPath.init(forRow: indexPath.row, inSection: indexPath.section - 1))
+        return super.tableView(tableView, cellForRowAt: IndexPath.init(row: indexPath.row, section: indexPath.section - 1))
     }
     
-    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if (indexPath.section == 0) {
             return 90.0
         }
-        return super.tableView(tableView, heightForRowAtIndexPath: NSIndexPath.init(forRow: indexPath.row, inSection: indexPath.section - 1))
+        return super.tableView(tableView, heightForRowAt: IndexPath.init(row: indexPath.row, section: indexPath.section - 1))
     }
     
-    override func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         if (section == 0) {
             return super.tableView(tableView, heightForFooterInSection: 0)
         }
         return super.tableView(tableView, heightForFooterInSection: section - 1)
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         
         var vc : UIViewController?
         if (indexPath.section == 0 && indexPath.row == 0) {
@@ -74,7 +74,7 @@ class MeMainViewController: WXSettingBaseViewController {
             navigationController?.pushViewController(vc!, animated: true)
         }
         else{
-            let group = data.objectAtIndex(indexPath.section - 1) as! WXSettingGrounp
+            let group = data[indexPath.section - 1]
             let item = group.itemAtIndex(indexPath.row)
             if (item.title == "设置") {
                 vc = MeSettingView()

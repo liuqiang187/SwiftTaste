@@ -33,39 +33,39 @@ class CommentView: UIView ,UITextFieldDelegate {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func setup()
+    fileprivate func setup()
     {
         backgroundColor = MainColor()
         
         addSubview(textFiled)
         
-        textFiled.snp_makeConstraints { (make) in
-            make.centerY.equalTo(snp_centerY)
-            make.width.equalTo(snp_width).inset(1)
+        textFiled.snp.makeConstraints { (make) in
+            make.centerY.equalTo(snp.centerY)
+            make.width.equalTo(snp.width).inset(1)
             make.height.equalTo(30)
-            make.left.equalTo(snp_left).offset(1)
+            make.left.equalTo(snp.left).offset(1)
         }
     }
 
-    private lazy var textFiled : UITextField = {
-        let text = UITextField(frame: CGRectZero)
-        text.backgroundColor = UIColor.whiteColor()
+    fileprivate lazy var textFiled : UITextField = {
+        let text = UITextField(frame: CGRect.zero)
+        text.backgroundColor = UIColor.white
         text.placeholder = "评论"
-        text.font = UIFont.systemFontOfSize(12)
+        text.font = UIFont.systemFont(ofSize: 12)
         text.delegate = self
         // 设置placeholder的字体
-        text.setValue(UIFont.systemFontOfSize(12), forKeyPath: "_placeholderLabel.font")
+        text.setValue(UIFont.systemFont(ofSize: 12), forKeyPath: "_placeholderLabel.font")
         return text
     }()
     
     
     
     // MARK: - UITextFieldDelegate
-    func textFieldDidBeginEditing(textField: UITextField) {
-        NSNotificationCenter.defaultCenter().postNotificationName(TextField_Change, object: nil)
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        NotificationCenter.default.post(name: Notification.Name(rawValue: TextField_Change), object: nil)
     }
     
-    func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         return true
     }
 }

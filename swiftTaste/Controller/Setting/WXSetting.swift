@@ -9,15 +9,15 @@
 import UIKit
 
 enum WXSettingItemAlignment : Int {
-    case WXSettingItemAlignmentLeft
-    case WXSettingItemAlignmentRight
-    case WXSettingItemAlignmentMiddle
+    case wxSettingItemAlignmentLeft
+    case wxSettingItemAlignmentRight
+    case wxSettingItemAlignmentMiddle
 }
 
 enum WXSettingItemType : Int {
-    case WXSettingItemTypeDefault
-    case WXSettingItemTypeButton
-    case WXSettingItemTypeSwitch
+    case wxSettingItemTypeDefault
+    case wxSettingItemTypeButton
+    case wxSettingItemTypeSwitch
 }
 
 class WXSettingItem: NSObject {
@@ -32,7 +32,7 @@ class WXSettingItem: NSObject {
     var middleImageName  : String? = ""
     var middlerImageURL = ""
     // 3.2 图片集
-    var subImages = []
+    var subImages = [String]()
     // 4 副标题
     var subTitle  : String? = ""
     // 5 右图片
@@ -40,45 +40,45 @@ class WXSettingItem: NSObject {
     var rightImageURL = ""
     
     /************************ 样式 ************************/
-    var alignment : WXSettingItemAlignment = .WXSettingItemAlignmentRight{
+    var alignment : WXSettingItemAlignment = .wxSettingItemAlignmentRight{
         didSet{
-            if alignment == .WXSettingItemAlignmentMiddle {
-                accessoryType = .None
+            if alignment == .wxSettingItemAlignmentMiddle {
+                accessoryType = .none
             }
         }
     }
-    var type : WXSettingItemType = .WXSettingItemTypeDefault{
+    var type : WXSettingItemType = .wxSettingItemTypeDefault{
         didSet{
-            if type == .WXSettingItemTypeSwitch {
-                accessoryType = .None
-                selectionStyle = .None
+            if type == .wxSettingItemTypeSwitch {
+                accessoryType = .none
+                selectionStyle = .none
             }
-            else if type == .WXSettingItemTypeButton {
+            else if type == .wxSettingItemTypeButton {
                 btnBGColor = RGB(2, 187, 0)
-                btnTitleColor = UIColor.whiteColor()
-                accessoryType = .None
-                selectionStyle = .None
-                bgColor = UIColor.clearColor()
+                btnTitleColor = UIColor.white
+                accessoryType = .none
+                selectionStyle = .none
+                bgColor = UIColor.clear
             }
         }
     }
     
-    var bgColor = UIColor.whiteColor()
-    var btnBGColor = UIColor.clearColor()
-    var btnTitleColor = UIColor.clearColor()
+    var bgColor = UIColor.white
+    var btnBGColor = UIColor.clear
+    var btnTitleColor = UIColor.clear
     
-    var titleColor = UIColor.blackColor()
-    var titleFont = UIFont.systemFontOfSize(15.5)
-    var subTitleColor = UIColor.grayColor()
-    var subTitleFont = UIFont.systemFontOfSize(15)
+    var titleColor = UIColor.black
+    var titleFont = UIFont.systemFont(ofSize: 15.5)
+    var subTitleColor = UIColor.gray
+    var subTitleFont = UIFont.systemFont(ofSize: 15)
     
-    var accessoryType : UITableViewCellAccessoryType = .DisclosureIndicator
-    var selectionStyle : UITableViewCellSelectionStyle = .Default
+    var accessoryType : UITableViewCellAccessoryType = .disclosureIndicator
+    var selectionStyle : UITableViewCellSelectionStyle = .default
     var rightImageHeightOfCell = 0.72
     var middleImageHeightOfCell = 0.35
     
     /************************ 类方法 ************************/
-    class func createWithImageName(imageName: String?,title: String,middleImageName: String?,subTitle: String?,rightImageName: String?) -> WXSettingItem
+    class func createWithImageName(_ imageName: String?,title: String,middleImageName: String?,subTitle: String?,rightImageName: String?) -> WXSettingItem
     {
         let item = WXSettingItem()
         item.imageName = imageName
@@ -89,27 +89,27 @@ class WXSettingItem: NSObject {
         return item
     }
     
-    class func createWithImageName(imageName: String?, title: String, subTitle: String?, rightImageName: String?) -> WXSettingItem
+    class func createWithImageName(_ imageName: String?, title: String, subTitle: String?, rightImageName: String?) -> WXSettingItem
     {
         return createWithImageName(imageName, title: title, middleImageName: nil, subTitle: subTitle, rightImageName: rightImageName)
     }
     
-    class func createWithImageName(imageName: String?, title: String, middleImageName: String, subTitle: String) -> WXSettingItem
+    class func createWithImageName(_ imageName: String?, title: String, middleImageName: String, subTitle: String) -> WXSettingItem
     {
         return createWithImageName(imageName, title: title, middleImageName: middleImageName, subTitle: subTitle, rightImageName: nil)
     }
     
-    class func createWithImageName(imageName: String, title: String) -> WXSettingItem
+    class func createWithImageName(_ imageName: String, title: String) -> WXSettingItem
     {
         return createWithImageName(imageName, title: title, subTitle: nil, rightImageName: nil)
     }
     
-    class func createWithTitle(title: String, subTitle: String?) -> WXSettingItem
+    class func createWithTitle(_ title: String, subTitle: String?) -> WXSettingItem
     {
         return createWithImageName(nil, title: title, subTitle: subTitle, rightImageName: nil)
     }
     
-    class func createWithTitle(title: String) -> WXSettingItem {
+    class func createWithTitle(_ title: String) -> WXSettingItem {
         return createWithTitle(title, subTitle: nil)
     }
     
@@ -123,12 +123,12 @@ class WXSettingGrounp: NSObject {
     var items = [WXSettingItem]()
     var itemsCount = 0
     
-    func itemAtIndex(index: NSInteger) -> WXSettingItem {
+    func itemAtIndex(_ index: NSInteger) -> WXSettingItem {
         return items[index]
     }
     
-    func indexOfItem(item: WXSettingItem) -> NSInteger {
-        return items.indexOf(item)!
+    func indexOfItem(_ item: WXSettingItem) -> NSInteger {
+        return items.index(of: item)!
     }
 }
 

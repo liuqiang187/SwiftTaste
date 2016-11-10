@@ -32,14 +32,14 @@ class WXFriendHeaderView: UITableViewHeaderFooterView {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        titleLabel.frame = CGRectMake(10, 0, self.frameWidth - 15, self.frameHeight)
+        titleLabel.frame = CGRect(x: 10, y: 0, width: self.frameWidth - 15, height: self.frameHeight)
     }
     
     // MARK: - lazy var
-    private lazy var titleLabel : UILabel = {
+    fileprivate lazy var titleLabel : UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFontOfSize(14)
-        label.textColor = UIColor.grayColor()
+        label.font = UIFont.systemFont(ofSize: 14)
+        label.textColor = UIColor.gray
         return label
     }()
 }

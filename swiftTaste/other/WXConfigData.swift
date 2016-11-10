@@ -10,7 +10,7 @@ import UIKit
 
 class WXConfigData: NSObject {
     
-    class func getFriendListDataBy(array :[WXUser]) -> ([[WXUser]]) {
+    class func getFriendListDataBy(_ array :[WXUser]) -> ([[WXUser]]) {
         
         var all = [[WXUser]]()
         
@@ -23,7 +23,7 @@ class WXConfigData: NSObject {
         return all
     }
     
-    class func getFriendListSectionBy(array :[WXUser]) -> ([String]) {
+    class func getFriendListSectionBy(_ array :[WXUser]) -> ([String]) {
         
         var all = [String]()
         
@@ -157,7 +157,7 @@ class WXConfigData: NSObject {
         items.append(group3)
         
         let exit = WXSettingItem.createWithTitle("退出登陆")
-        exit.alignment = WXSettingItemAlignment.WXSettingItemAlignmentMiddle
+        exit.alignment = WXSettingItemAlignment.wxSettingItemAlignmentMiddle
         let group4 = WXSettingGrounp()
         group4.items = [exit]
         items.append(group4)

@@ -13,7 +13,11 @@ class WXFriendCell: CommonTableViewCell {
     var user : WXUser?
         {
         didSet{
-            avatarImageView.kf_setImageWithURL(NSURL.init(string: (user?.avatarURL)!)!, placeholderImage: UIImage.init(named: (user?.avatarURL)!))
+            avatarImageView.kf.setImage(with: URL.init(string: (user?.avatarURL)!)!,
+                                        placeholder: nil,
+                                        options: [.transition(.fade(1))],
+                                        progressBlock: nil,
+                                        completionHandler: nil)
             usernameLabel.text = user?.username
         }
     }
@@ -36,22 +40,22 @@ class WXFriendCell: CommonTableViewCell {
         let spaceX = self.frameHeight * 0.18
         let spaceY = self.frameHeight * 0.17
         let imageWidth = self.frameHeight - spaceY * 2
-        avatarImageView.frame = CGRectMake(spaceX, spaceY, imageWidth, imageWidth)
+        avatarImageView.frame = CGRect(x: spaceX, y: spaceY, width: imageWidth, height: imageWidth)
         
         let labelX = imageWidth + spaceX * 2
         let labelWidth = self.frameWidth - labelX - spaceX * 1.5
-        usernameLabel.frame = CGRectMake(labelX, spaceY, labelWidth, imageWidth)
+        usernameLabel.frame = CGRect(x: labelX, y: spaceY, width: labelWidth, height: imageWidth)
     }
     
     // MARK: - lazy var
-    private lazy var avatarImageView : UIImageView = {
+    fileprivate lazy var avatarImageView : UIImageView = {
         let image = UIImageView()
         return image
     }()
     
-    private lazy var usernameLabel : UILabel = {
+    fileprivate lazy var usernameLabel : UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFontOfSize(17)
+        label.font = UIFont.systemFont(ofSize: 17)
         return label
     }()
 }

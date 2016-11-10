@@ -12,62 +12,62 @@ class WXSettingCell: CommonTableViewCell  {
 
     var item : WXSettingItem = WXSettingItem(){
         didSet{
-            if item.type == .WXSettingItemTypeButton {
-                cButton.setTitle(item.title, forState: .Normal)
+            if item.type == .wxSettingItemTypeButton {
+                cButton.setTitle(item.title, for: UIControlState())
                 cButton.backgroundColor = item.btnBGColor
-                cButton.setTitleColor(item.btnTitleColor, forState: .Normal)
-                cButton.hidden = false
-                titleLabel.hidden = true
+                cButton.setTitleColor(item.btnTitleColor, for: UIControlState())
+                cButton.isHidden = false
+                titleLabel.isHidden = true
             }
             else{
-                cButton.hidden = true
+                cButton.isHidden = true
                 titleLabel.text = item.title
-                titleLabel.hidden = false
+                titleLabel.isHidden = false
             }
             if item.subTitle == nil {
-                subTitleLabel.hidden = true
+                subTitleLabel.isHidden = true
             }
             else{
                 subTitleLabel.text = item.subTitle
-                subTitleLabel.hidden = false
+                subTitleLabel.isHidden = false
             }
             
             if (item.imageName == nil) {
                 mainImageView.image = nil
-                mainImageView.hidden = true
+                mainImageView.isHidden = true
             }
             else{
                 mainImageView.image = UIImage.init(named: item.imageName!)
-                mainImageView.hidden = false
+                mainImageView.isHidden = false
             }
             if item.middleImageName == nil {
                 middleImageView.image = nil
-                middleImageView.hidden = true
+                middleImageView.isHidden = true
             }
             else{
                 middleImageView.image = UIImage.init(named: item.middleImageName!)
-                middleImageView.hidden = false
+                middleImageView.isHidden = false
             }
             if item.rightImageName == nil {
                 rightImageView.image = nil
-                rightImageView.hidden = true
+                rightImageView.isHidden = true
             }
             else{
                 rightImageView.image = UIImage.init(named: item.rightImageName!)
-                rightImageView.hidden = false
+                rightImageView.isHidden = false
             }
             
-            if item.type == .WXSettingItemTypeSwitch {
-                cSwitch.hidden = false
+            if item.type == .wxSettingItemTypeSwitch {
+                cSwitch.isHidden = false
             }
             else{
-                cSwitch.hidden = true
+                cSwitch.isHidden = true
             }
             
             if item.subImages.count > 0 {
                 
                 for index in 0 ..< item.subImages.count{
-                    let imageName = item.subImages[index] as! String
+                    let imageName = item.subImages[index] 
                     
                     var button = UIButton()
                     if index < subImageArray.count {
@@ -76,7 +76,7 @@ class WXSettingCell: CommonTableViewCell  {
                     else{
                         subImageArray.append(button)
                     }
-                    button.setImage(UIImage.init(named: imageName), forState: .Normal)
+                    button.setImage(UIImage.init(named: imageName), for: UIControlState())
                     addSubview(button)
                 }
                 for index in item.subImages.count ..< subImageArray.count{
@@ -103,12 +103,12 @@ class WXSettingCell: CommonTableViewCell  {
         super.layoutSubviews()
         
         let spaceX = leftFreeSpace
-        if item.type == .WXSettingItemTypeButton {
+        if item.type == .wxSettingItemTypeButton {
             let buttonX = self.frameWidth * 0.04
             let buttonY = self.frameHeight * 0.09
             let buttonWidth = self.frameWidth - buttonX * 2
             let buttonHeight = self.frameHeight - buttonY * 2
-            cButton.frame = CGRectMake(buttonX, 0, buttonWidth, buttonHeight)
+            cButton.frame = CGRect(x: buttonX, y: 0, width: buttonWidth, height: buttonHeight)
             return;
         }
         
@@ -116,43 +116,43 @@ class WXSettingCell: CommonTableViewCell  {
         var y = self.frameHeight * 0.22
         let h = self.frameHeight - y * 2
         y -= 0.25;      // 补线高度差
-        var size = CGSizeZero
+        var size = CGSize.zero
         
         // Main Image
         if (item.imageName != nil) {
-            mainImageView.frame = CGRectMake(x, y, h, h)
+            mainImageView.frame = CGRect(x: x, y: y, width: h, height: h)
             x += h + spaceX
         }
         // Title
         if (item.title != nil) {
-            size = titleLabel.sizeThatFits(CGSizeMake(CGFloat(MAXFLOAT), CGFloat(MAXFLOAT)))
-            if item.alignment == .WXSettingItemAlignmentMiddle {
-                titleLabel.frame = CGRectMake((self.frameWidth - size.width) * 0.5, y, size.width, h)
+            size = titleLabel.sizeThatFits(CGSize(width: CGFloat(MAXFLOAT), height: CGFloat(MAXFLOAT)))
+            if item.alignment == .wxSettingItemAlignmentMiddle {
+                titleLabel.frame = CGRect(x: (self.frameWidth - size.width) * 0.5, y: y, width: size.width, height: h)
             }
             else {
-                titleLabel.frame = CGRectMake(x, y - 0.5, size.width, h)
+                titleLabel.frame = CGRect(x: x, y: y - 0.5, width: size.width, height: h)
             }
         }
         
-        if item.alignment == .WXSettingItemAlignmentRight {
-            var rx = self.frameWidth - (item.accessoryType == UITableViewCellAccessoryType.DisclosureIndicator ? 35 : 10)
-            if item.type == .WXSettingItemTypeSwitch {
+        if item.alignment == .wxSettingItemAlignmentRight {
+            var rx = self.frameWidth - (item.accessoryType == UITableViewCellAccessoryType.disclosureIndicator ? 35 : 10)
+            if item.type == .wxSettingItemTypeSwitch {
                 let cx = rx - self.cSwitch.frameWidth / 1.7
-                cSwitch.center = CGPointMake(cx, self.frameHeight / 2.0)
+                cSwitch.center = CGPoint(x: cx, y: self.frameHeight / 2.0)
                 rx -= self.cSwitch.frameWidth - 5
             }
             if (self.item.rightImageName != nil){
                 let rh = self.frameHeight * CGFloat(self.item.rightImageHeightOfCell)
                 let ry = (self.frameHeight - rh) / 2
                 rx -= rh;
-                rightImageView.frame = CGRectMake(rx, ry, rh, rh)
+                rightImageView.frame = CGRect(x: rx, y: ry, width: rh, height: rh)
                 rx -= rh * 0.15
             }
             
             if (self.item.subTitle != nil){
-                size = subTitleLabel.sizeThatFits(CGSizeMake(CGFloat(MAXFLOAT), CGFloat(MAXFLOAT)))
+                size = subTitleLabel.sizeThatFits(CGSize(width: CGFloat(MAXFLOAT), height: CGFloat(MAXFLOAT)))
                 rx -= size.width
-                subTitleLabel.frame = CGRectMake(rx, y - 0.5, size.width, h)
+                subTitleLabel.frame = CGRect(x: rx, y: y - 0.5, width: size.width, height: h)
                 rx -= 5
             }
             
@@ -160,11 +160,11 @@ class WXSettingCell: CommonTableViewCell  {
                 let mh = self.frameHeight * CGFloat(self.item.middleImageHeightOfCell);
                 let my = (self.frameHeight - mh) / 2 - 0.5
                 rx -= mh
-                middleImageView.frame = CGRectMake(rx, my, mh, mh)
+                middleImageView.frame = CGRect(x: rx, y: my, width: mh, height: mh)
                 rx -= mh * 0.15
             }
         }
-        else if item.alignment == .WXSettingItemAlignmentLeft{
+        else if item.alignment == .wxSettingItemAlignmentLeft{
             var t = 105 as CGFloat
             if kScreenWidth() > 380 {
                 t = 120
@@ -172,8 +172,8 @@ class WXSettingCell: CommonTableViewCell  {
             var lx = (x < t ? t : x);
             
             if (self.item.subTitle != nil){                
-                size = subTitleLabel.sizeThatFits(CGSizeMake(CGFloat(MAXFLOAT), CGFloat(MAXFLOAT)))
-                subTitleLabel.frame = CGRectMake(lx, y - 0.5, size.width, h)
+                size = subTitleLabel.sizeThatFits(CGSize(width: CGFloat(MAXFLOAT), height: CGFloat(MAXFLOAT)))
+                subTitleLabel.frame = CGRect(x: lx, y: y - 0.5, width: size.width, height: h)
                 lx += size.width + 5
             }
             
@@ -188,7 +188,7 @@ class WXSettingCell: CommonTableViewCell  {
                 
                 for button : UIButton in subImageArray {
                     if (index < Int(count)) {
-                        button.frame = CGRectMake(lx + (imageWidth + space) * CGFloat(index), (self.frameHeight - imageWidth) / 2, imageWidth, imageWidth)
+                        button.frame = CGRect(x: lx + (imageWidth + space) * CGFloat(index), y: (self.frameHeight - imageWidth) / 2, width: imageWidth, height: imageWidth)
                         space = imageWidth * 0.1
                     }
                     else{
@@ -218,8 +218,8 @@ class WXSettingCell: CommonTableViewCell  {
         fatalError("init(coder:) has not been implemented")
     }
     
-    class func getHeightForText(item: WXSettingItem) -> CGFloat {
-        if item.type == .WXSettingItemTypeButton {
+    class func getHeightForText(_ item: WXSettingItem) -> CGFloat {
+        if item.type == .wxSettingItemTypeButton {
             return 50.0
         }
         else if item.subImages.count > 0 {
@@ -230,31 +230,31 @@ class WXSettingCell: CommonTableViewCell  {
     
     
     // MARK: - lazy var
-    private lazy var titleLabel : UILabel = {
+    fileprivate lazy var titleLabel : UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFontOfSize(17)
+        label.font = UIFont.systemFont(ofSize: 17)
         return label
     }()
     
-    private lazy var subTitleLabel : UILabel = {
+    fileprivate lazy var subTitleLabel : UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFontOfSize(15)
-        label.textColor = UIColor.grayColor()
+        label.font = UIFont.systemFont(ofSize: 15)
+        label.textColor = UIColor.gray
         return label
     }()
     
-    private lazy var mainImageView = UIImageView.init()
-    private lazy var middleImageView = UIImageView.init()
-    private lazy var rightImageView = UIImageView.init()
-    private lazy var subImageArray = [UIButton]()
-    private lazy var cSwitch = UISwitch.init()
+    fileprivate lazy var mainImageView = UIImageView.init()
+    fileprivate lazy var middleImageView = UIImageView.init()
+    fileprivate lazy var rightImageView = UIImageView.init()
+    fileprivate lazy var subImageArray = [UIButton]()
+    fileprivate lazy var cSwitch = UISwitch.init()
     
-    private lazy var cButton : UIButton = {
+    fileprivate lazy var cButton : UIButton = {
        let btn = UIButton()
-        btn.titleLabel?.font = UIFont.systemFontOfSize(16)
+        btn.titleLabel?.font = UIFont.systemFont(ofSize: 16)
         btn.layer.masksToBounds = true
         btn.layer.cornerRadius = 4
-        btn.layer.borderColor = RGBA(188, 188, 188, A: 0.6).CGColor
+        btn.layer.borderColor = RGBA(188, 188, 188, A: 0.6).cgColor
         btn.layer.borderWidth = 0.5
         return btn
     }()

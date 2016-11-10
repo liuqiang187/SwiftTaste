@@ -10,19 +10,19 @@ import UIKit
 
 class NavigationViewController: UINavigationController {
 
-    override func pushViewController(viewController: UIViewController, animated: Bool) {
+    override func pushViewController(_ viewController: UIViewController, animated: Bool) {
         if childViewControllers.count > 0 {
             // push的时候, 隐藏tabbar
             viewController.hidesBottomBarWhenPushed = true
             // 添加返回按钮
-            viewController.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "icon_back_switch"), style: .Done, target: self, action: #selector(NavigationViewController.back))
+            viewController.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "icon_back_switch"), style: .done, target: self, action: #selector(NavigationViewController.back))
         }
         super.pushViewController(viewController, animated: true)
         
     }
     
     func back() {
-        popViewControllerAnimated(true)
+        popViewController(animated: true)
     }
 
 }

@@ -18,9 +18,9 @@ class CommonViewController: UIViewController {
         self.hidesBottomBarWhenPushed = true
     }
 
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        UIApplication.sharedApplication().statusBarStyle = .LightContent
+        UIApplication.shared.statusBarStyle = .lightContent
     }
 
 }

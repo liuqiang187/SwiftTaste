@@ -10,7 +10,7 @@ import UIKit
 
 class SecondViewController: UIViewController {
 
-    let imageArray : [UIImage!] = [UIImage.init(named: "dice_Action_0"),UIImage.init(named: "dice_Action_1"),UIImage.init(named: "dice_Action_2"),UIImage.init(named: "dice_Action_3")]
+    let imageArray : [UIImage?] = [UIImage.init(named: "dice_Action_0"),UIImage.init(named: "dice_Action_1"),UIImage.init(named: "dice_Action_2"),UIImage.init(named: "dice_Action_3")]
     
     
     override func viewDidLoad() {
@@ -21,17 +21,17 @@ class SecondViewController: UIViewController {
         navigationItem.title = "朋友"
         
 //        view.backgroundColor = RGB(40, G: 162, B: 100)
-        view.backgroundColor = UIColor.whiteColor()
+        view.backgroundColor = UIColor.white
         
         setup()
     }
     
-    private func setup()
+    fileprivate func setup()
     {
         view.addSubview(inputBtn)
-        inputBtn.snp_makeConstraints { (make) in
-            make.centerX.equalTo(view.snp_centerX)
-            make.centerY.equalTo(view.snp_centerY)
+        inputBtn.snp.makeConstraints { (make) in
+            make.centerX.equalTo(view.snp.centerX)
+            make.centerY.equalTo(view.snp.centerY)
             make.height.equalTo(100)
             make.width.equalTo(100)
         }
@@ -39,14 +39,14 @@ class SecondViewController: UIViewController {
     }
     
     func btnClick(){
-        UIView.animateWithDuration(0.2) {
-            self.inputBtn.snp_updateConstraints { (make) in
-                make.centerY.equalTo(self.view.snp_centerY).offset(100)
+        UIView.animate(withDuration: 0.2) {
+            self.inputBtn.snp.updateConstraints { (make) in
+                make.centerY.equalTo(self.view.snp.centerY).offset(100)
             }
         }
-        imageView.snp_makeConstraints { (make) in
-            make.centerX.equalTo(view.snp_centerX)
-            make.centerY.equalTo(view.snp_centerY)
+        imageView.snp.makeConstraints { (make) in
+            make.centerX.equalTo(view.snp.centerX)
+            make.centerY.equalTo(view.snp.centerY)
             make.height.equalTo(100)
             make.width.equalTo(100)
         }
@@ -57,15 +57,15 @@ class SecondViewController: UIViewController {
     }
 
     // MARK: - lazy var
-    private lazy var inputBtn : UIButton = {
+    fileprivate lazy var inputBtn : UIButton = {
         let btn = UIButton()
-        btn.setTitle("摇一摇", forState: .Normal)
+        btn.setTitle("摇一摇", for: UIControlState())
         btn.backgroundColor = MainColor()
-        btn.setTitleColor(UIColor.blackColor(), forState: .Normal)
-        btn.addTarget(self, action: #selector(SecondViewController.btnClick), forControlEvents: .TouchUpInside)
+        btn.setTitleColor(UIColor.black, for: UIControlState())
+        btn.addTarget(self, action: #selector(SecondViewController.btnClick), for: .touchUpInside)
         return btn
     }()
 
-    private lazy var imageView = UIImageView()
+    fileprivate lazy var imageView = UIImageView()
     
 }

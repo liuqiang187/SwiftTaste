@@ -17,7 +17,7 @@ class MainViewController: UITabBarController, UITabBarControllerDelegate {
         setup()
     }
 
-    private func setup()
+    fileprivate func setup()
     {
         // 设置tabBar的tintColor
         tabBar.tintColor = MainColor()
@@ -29,7 +29,7 @@ class MainViewController: UITabBarController, UITabBarControllerDelegate {
     }
     
     // 添加子控件
-    private func addViewController(childController: UIViewController, title: String, icon: String, iconPress: String) {
+    fileprivate func addViewController(_ childController: UIViewController, title: String, icon: String, iconPress: String) {
         let nav = NavigationViewController(rootViewController: childController)
         addChildViewController(nav)
         childController.tabBarItem.title = title;
