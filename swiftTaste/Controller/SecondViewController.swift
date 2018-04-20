@@ -38,7 +38,7 @@ class SecondViewController: UIViewController {
         view.addSubview(imageView)
     }
     
-    func btnClick(){
+    @objc func btnClick(){
         UIView.animate(withDuration: 0.2) {
             self.inputBtn.snp.updateConstraints { (make) in
                 make.centerY.equalTo(self.view.snp.centerY).offset(100)

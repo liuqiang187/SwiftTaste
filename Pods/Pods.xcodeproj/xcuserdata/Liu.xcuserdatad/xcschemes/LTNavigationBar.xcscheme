@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0700"
+   LastUpgradeVersion = "0930"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -13,11 +13,11 @@
             buildForProfiling = "YES"
             buildForArchiving = "YES">
             <BuildableReference
-               BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '52E73AAD2C94906D4C88BFEC7DE4BB2E'
-               BlueprintName = 'LTNavigationBar'
-               ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'LTNavigationBar.framework'>
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "52E73AAD2C94906D4C88BFEC7DE4BB2E"
+               BlueprintName = "LTNavigationBar"
+               ReferencedContainer = "container:Pods.xcodeproj"
+               BuildableName = "LTNavigationBar.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
