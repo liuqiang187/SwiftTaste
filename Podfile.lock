@@ -1,34 +1,48 @@
 PODS:
-  - Alamofire (4.0.1)
+  - Alamofire (4.7.2)
   - FDFullscreenPopGesture (1.1)
-  - Kingfisher (3.1.4)
+  - Kingfisher (4.7.0)
   - LTNavigationBar (2.1.2)
-  - SnapKit (3.0.2)
+  - SnapKit (4.0.0)
 
 DEPENDENCIES:
-  - Alamofire (from `https://github.com/Alamofire/Alamofire.git`, tag `4.0.1`)
+  - Alamofire (from `https://github.com/Alamofire/Alamofire.git`)
   - FDFullscreenPopGesture
-  - Kingfisher (~> 3.1.4)
+  - Kingfisher (from `https://github.com/onevcat/Kingfisher.git`)
   - LTNavigationBar
-  - SnapKit (~> 3.0.2)
+  - SnapKit (from `https://github.com/SnapKit/SnapKit.git`)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - FDFullscreenPopGesture
+    - LTNavigationBar
 
 EXTERNAL SOURCES:
   Alamofire:
     :git: https://github.com/Alamofire/Alamofire.git
-    :tag: 4.0.1
+  Kingfisher:
+    :git: https://github.com/onevcat/Kingfisher.git
+  SnapKit:
+    :git: https://github.com/SnapKit/SnapKit.git
 
 CHECKOUT OPTIONS:
   Alamofire:
+    :commit: 2fb881a1702cb1976c36192aceb54dcedab6fdc2
     :git: https://github.com/Alamofire/Alamofire.git
-    :tag: 4.0.1
+  Kingfisher:
+    :commit: 50912ff15af1562121d65d913c428977c3508dd6
+    :git: https://github.com/onevcat/Kingfisher.git
+  SnapKit:
+    :commit: 2c8262ef9f00a250aae4f5f3c2a9539eb1c39520
+    :git: https://github.com/SnapKit/SnapKit.git
 
 SPEC CHECKSUMS:
-  Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
+  Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
   FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
-  Kingfisher: 6c67e3e57f2d81a9cfdfa25052cd86f33ceac9bb
+  Kingfisher: da6b005aa96d37698e3e4f1ccfe96a5b9bbf27d6
   LTNavigationBar: bfc5fc06a83463009b9d99675f2a32dcbb631b00
-  SnapKit: 2e456761aa92d4d4067a7a5594c18769d451a8ad
+  SnapKit: 4b1c20a79bc7655f2bdefba4f008630681f63fe5
 
-PODFILE CHECKSUM: de6ec1aa403e97099e2dadfc72eef05a52c157e0
+PODFILE CHECKSUM: 35e078c622464c7114f1e2f2611c490be0895af4
 
-COCOAPODS: 1.2.0.beta.1
+COCOAPODS: 1.5.0

@@ -79,6 +79,6 @@ class NewFetureViewController: UITableViewController {
     
     fileprivate func setNavigationBarTransformProgress(_ progress: CGFloat) {
         navigationController?.navigationBar.lt_setTranslationY(-44 * progress)
-        navigationController?.navigationBar.lt_setElementsAlpha(1-progress)
+//        navigationController?.navigationBar.lt_setElementsAlpha(1-progress)
     }
 }

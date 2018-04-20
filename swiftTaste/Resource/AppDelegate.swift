@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // 设置全局的UINavigationBar属性
         let bar = UINavigationBar.appearance()
         bar.tintColor = UIColor.white
-        bar.titleTextAttributes = [NSFontAttributeName : UIFont.systemFont(ofSize: 17), NSForegroundColorAttributeName : UIColor.white]
+        bar.titleTextAttributes = [NSAttributedStringKey.font : UIFont.systemFont(ofSize: 17), NSAttributedStringKey.foregroundColor : UIColor.white]
         bar.lt_setBackgroundColor(NavBarColor())
         
         UIApplication.shared.statusBarStyle = .lightContent

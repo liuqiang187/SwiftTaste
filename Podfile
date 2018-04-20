@@ -3,9 +3,9 @@ platform :ios, "9.0"
 
 target 'swiftTaste' do
 
-pod 'SnapKit', '~> 3.0.2'
-pod 'Alamofire', :git => 'https://github.com/Alamofire/Alamofire.git', :tag => '4.0.1'
-pod 'Kingfisher', '~> 3.1.4'
+pod 'SnapKit', :git => 'https://github.com/SnapKit/SnapKit.git'
+pod 'Alamofire', :git => 'https://github.com/Alamofire/Alamofire.git'
+pod 'Kingfisher', :git => 'https://github.com/onevcat/Kingfisher.git'
 pod 'FDFullscreenPopGesture'
 pod 'LTNavigationBar'
 #pod 'Moya'

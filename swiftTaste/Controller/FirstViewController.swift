@@ -48,7 +48,7 @@ class FirstViewController: UIViewController {
         }
     }
     
-    func btnClick()
+    @objc func btnClick()
     {
         let vc = NewFetureViewController()
 //        let vc = MeSettingView()

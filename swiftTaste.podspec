@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "swiftTaste"
-  s.version      = "0.0.1"
+  s.version      = "0.1.0"
   s.summary      = "test"
 
   # This description is used to generate tags and improve search results.
